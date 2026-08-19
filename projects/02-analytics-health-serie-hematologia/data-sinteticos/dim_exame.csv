@@ -1,7 +1,0 @@
-exame_id;exame_nome;unidade_medida;referencia_min;referencia_max
-E001;Hemoglobina;g/dL;12;17.5
-E002;Hematócrito;%;36;52
-E003;Leucócitos;células/mm³;4000;11000
-E004;Plaquetas;células/mm³;150000;450000
-E005;Hemácias;milhões/mm³;4;6
-E006;VCM;fL;80;100
