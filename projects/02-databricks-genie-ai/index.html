@@ -29,10 +29,20 @@
 .genie-caption span{margin-top:5px;color:#858c95;line-height:1.6;font-size:11px}
 @media(max-width:900px){.genie-showcase{grid-template-columns:1fr}}
 
+
+.report-stage{position:relative;min-height:710px;background:#f5f5f2;color:#151515;overflow:hidden}
+.report-page{position:absolute;inset:0;padding:42px 44px;opacity:0;animation:reportCycle 20s infinite;background:linear-gradient(180deg,#fff,#f4f4f1)}
+.report-page small{color:#6d7279;letter-spacing:1.2px;font-size:10px}.report-page h3{font-size:28px;margin:16px 0 26px;color:#111}.report-page h4{font-size:18px;margin:22px 0 10px}.report-page p,.report-page li{font-size:14px;line-height:1.7;color:#333}.report-page li{margin:6px 0}
+.report-kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.report-kpis b{padding:18px;background:#111;color:#fff;border-radius:8px;font-size:24px}.report-kpis span{display:block;color:#a9afb7;font-size:10px;margin-top:5px}
+.report-note{margin-top:28px;padding:14px;border-left:3px solid #7657ff;background:#ececf2;font-size:12px;line-height:1.6}
+.rp1{animation-delay:0s}.rp2{animation-delay:4s}.rp3{animation-delay:8s}.rp4{animation-delay:12s}.rp5{animation-delay:16s}
+@keyframes reportCycle{0%{opacity:0;transform:translateX(18px)}4%{opacity:1;transform:none}17%{opacity:1;transform:none}20%,100%{opacity:0;transform:translateX(-18px)}}
+@media(max-width:900px){.report-stage{min-height:620px}.report-page{padding:28px}.report-page h3{font-size:22px}}
+
 </style>
 </head>
 <body>
-<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#historia">História do dado</a><a href="#dashboard">Dashboard</a><a href="#genie">Genie</a><a href="#arquitetura">Arquitetura</a></nav><a class="gh" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio/tree/main/projects/04-databricks-genie-ai" target="_blank" rel="noreferrer">Código ↗</a></header>
+<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#historia">História do dado</a><a href="#dashboard">Dashboard</a><a href="#genie">Genie</a><a href="#arquitetura">Arquitetura</a></nav><a class="gh" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio/tree/main/projects/02-databricks-genie-ai" target="_blank" rel="noreferrer">Código ↗</a></header>
 
 <main>
 <section class="oil-hero">
@@ -98,7 +108,40 @@
       <div><span class="status-dot"></span>Oil &amp; Gas Industrial Data Assistant</div>
       <small>RESUMO EXECUTIVO GERADO PELO GENIE</small>
     </div>
-    <img src="genie/genie-resumo-executivo.gif" alt="Relatório executivo de Oil & Gas gerado pelo Databricks Genie" loading="lazy">
+    <div class="report-stage" aria-label="Resumo executivo gerado pelo Genie">
+  <article class="report-page rp1">
+    <small>PÁGINA 1 / 5</small>
+    <h3>Resumo Executivo — Operação Oil &amp; Gas</h3>
+    <h4>Produção de Petróleo</h4>
+    <p><strong>Rio de Janeiro</strong> lidera com 2,93 bilhões de m³, aproximadamente 80% da produção total.</p>
+    <ol><li>Rio de Janeiro — 2,93 bi m³</li><li>Espírito Santo — 299,2 mi m³</li><li>São Paulo — 196,8 mi m³</li><li>Rio Grande do Norte — 101,6 mi m³</li><li>Bahia — 64,3 mi m³</li></ol>
+  </article>
+  <article class="report-page rp2">
+    <small>PÁGINA 2 / 5</small>
+    <h3>Produção e Eficiência de Gás Natural</h3>
+    <p>Últimos 12 meses: <strong>72,74 milhões de mil m³</strong>, com tendência de crescimento.</p>
+    <div class="report-kpis"><b>55,6%<span>Reinjeção</span></b><b>32,7%<span>Gás disponível</span></b><b>9,3%<span>Consumo próprio</span></b><b>2,7%<span>Queima/perdas</span></b></div>
+  </article>
+  <article class="report-page rp3">
+    <small>PÁGINA 3 / 5</small>
+    <h3>Ativos Industriais — Risco Operacional</h3>
+    <p>Os 4 ativos monitorados apresentaram 2 falhas cada no período analisado.</p>
+    <ul><li>COMPRESSOR-02 — destaque de downtime</li><li>PUMP-02 — 16,1 h</li><li>PUMP-01 — 13,3 h</li><li>COMPRESSOR-01 — 12,5 h</li></ul>
+    <p><strong>48 anomalias</strong> sintéticas foram usadas para avaliar relação com falhas.</p>
+  </article>
+  <article class="report-page rp4">
+    <small>PÁGINA 4 / 5</small>
+    <h3>Principais Recomendações</h3>
+    <ul><li>Investigar ativos com maior downtime.</li><li>Revisar o protocolo de resposta a anomalias.</li><li>Usar anomalias como gatilho para manutenção preditiva.</li><li>Avaliar oportunidades de otimização da reinjeção.</li><li>Manter queima/perdas abaixo de 3%.</li></ul>
+  </article>
+  <article class="report-page rp5">
+    <small>PÁGINA 5 / 5</small>
+    <h3>Conclusão Executiva</h3>
+    <p>Destaques da análise:</p>
+    <ul><li>Baixa taxa de queima/perdas.</li><li>Produção de gás em crescimento.</li><li>Monitoramento de anomalias preparado para análise.</li></ul>
+    <div class="report-note">Sensores e manutenção usam dados sintéticos da POC. Produção de petróleo e gás utiliza dados históricos públicos.</div>
+  </article>
+</div>
     <div class="genie-caption">
       <strong>Resultado da consulta</strong>
       <span>O Genie consolida produção, eficiência de gás, confiabilidade, manutenção e sensores em uma resposta executiva apoiada pelos dados da camada Analytics.</span>
@@ -124,7 +167,7 @@
 <section class="section">
 <div class="tag">05 / DADOS PUBLICÁVEIS</div>
 <div class="privacy"><b>Privacidade por design.</b> Dados de produção utilizam fonte pública. Sensores, ativos, falhas e manutenção são dados sintéticos criados exclusivamente para a POC. Nenhum dado corporativo confidencial é utilizado.</div>
-<div class="actions"><a class="primary" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio/tree/main/projects/04-databricks-genie-ai" target="_blank">Ver projeto no GitHub ↗</a><a class="secondary" href="../../">Voltar ao portfólio</a></div>
+<div class="actions"><a class="primary" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio/tree/main/projects/02-databricks-genie-ai" target="_blank">Ver projeto no GitHub ↗</a><a class="secondary" href="../../">Voltar ao portfólio</a></div>
 </section>
 </main>
 <footer>© 2026 Edu Souza · Oil & Gas Industrial Analytics 360</footer>
