@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Microsoft Fabric Data Engineering — Wind Power Analytics">
+<title>Fabric Data Engineering | Edu Souza</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<style>
+.status{display:inline-flex;align-items:center;gap:8px;border:1px solid #665113;background:#171307;color:#f3c84b;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:800;margin-top:20px}
+.status:before{content:"";width:8px;height:8px;border-radius:50%;background:#f3c84b;box-shadow:0 0 14px rgba(243,200,75,.6)}
+.fabric-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:35px}
+.fabric-flow div{border:1px solid #292d33;border-radius:8px;background:#0b0d0f;padding:20px}
+.fabric-flow small{color:#a5ff00}.fabric-flow b{display:block;margin:8px 0}.fabric-flow span{font-size:11px;color:#868d96;line-height:1.6}
+.dev-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}.dev-card{border:1px solid #292d33;border-radius:8px;background:#0b0d0f;padding:22px}.dev-card h3{margin-top:0}.dev-card p{color:#9298a1;line-height:1.75;font-size:13px}
+@media(max-width:850px){.fabric-flow{grid-template-columns:1fr}.dev-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#arquitetura">Arquitetura</a><a href="#etapas">Etapas</a></nav><a class="gh" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio" target="_blank">GitHub ↗</a></header>
+<main>
+<section class="case-hero">
+<div class="eyebrow">MICROSOFT FABRIC · DATA ENGINEERING · WIND POWER</div>
+<h1>Fabric Data Engineering<br><em>Wind Power Analytics.</em></h1>
+<p>Projeto prático de engenharia de dados que será desenvolvido durante o curso <strong>Microsoft Fabric - A Formação Completa 2026</strong>. A solução acompanhará o fluxo completo do dado, da ingestão no Lakehouse até o modelo semântico, Power BI e orquestração automatizada.</p>
+<div class="status">EM DESENVOLVIMENTO</div>
+</section>
+
+<section id="arquitetura" class="section">
+<div class="tag">01 / ARQUITETURA PREVISTA</div>
+<h2>Da ingestão<br><em>à automação.</em></h2>
+<div class="fabric-flow">
+<div><small>01</small><b>Ingestão</b><span>CSV e fonte web chegando ao Lakehouse Bronze.</span></div>
+<div><small>02</small><b>Medallion</b><span>Notebooks processando Bronze → Silver → Gold.</span></div>
+<div><small>03</small><b>Modelo Semântico</b><span>Camada analítica preparada para consumo.</span></div>
+<div><small>04</small><b>Power BI</b><span>Análise da produção de eletricidade das turbinas eólicas.</span></div>
+<div><small>05</small><b>Pipeline</b><span>Orquestração e atualização automática diária.</span></div>
+</div>
+</section>
+
+<section id="etapas" class="section">
+<div class="tag">02 / ESCOPO DO PROJETO</div>
+<h2>O que será<br><em>implementado.</em></h2>
+<div class="dev-grid">
+<div class="dev-card"><h3>Ingestão de Dados</h3><p>Carregar dados de arquivo CSV no Lakehouse Bronze e organizar a camada de entrada.</p></div>
+<div class="dev-card"><h3>Bronze → Silver → Gold</h3><p>Criar notebooks para limpeza, transformação e evolução dos dados na arquitetura Medallion.</p></div>
+<div class="dev-card"><h3>Modelo Semântico + Power BI</h3><p>Construir o modelo analítico e relatórios para acompanhar a produção de energia eólica.</p></div>
+<div class="dev-card"><h3>Atualização Web</h3><p>Desenvolver notebook para recuperar informações atualizadas diariamente de uma fonte na internet.</p></div>
+<div class="dev-card"><h3>Pipeline de Orquestração</h3><p>Automatizar a execução das etapas e configurar agendamento recorrente, como às 7h diariamente.</p></div>
+<div class="dev-card"><h3>Entrega</h3><p>Documentar arquitetura, notebooks, pipeline, modelo e relatório conforme o projeto evoluir.</p></div>
+</div>
+<div class="case-tags" style="margin-top:28px"><span>Microsoft Fabric</span><span>Lakehouse</span><span>Notebooks</span><span>Pipelines</span><span>Power BI</span><span>PySpark</span><span>SQL</span></div>
+</section>
+</main>
+<footer>© 2026 Edu Souza · Projeto em desenvolvimento</footer>
+</body></html>
