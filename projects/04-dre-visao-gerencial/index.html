@@ -1,66 +1,40 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="DRE | Visão Gerencial — análise de previsto x realizado, indicadores financeiros e resumo inteligente no Power BI com dados 100% sintéticos.">
+<meta name="description" content="DRE Visão Gerencial — Power BI, análise financeira e narrativa inteligente com dados sintéticos.">
 <title>DRE | Visão Gerencial — Edu Souza</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 <style>
-:root{color-scheme:dark}
-body{background:#090e13;color:#eaf0f5}
-.wrap{max-width:1120px;margin:auto;padding:48px 24px 92px}
-.back{color:#b4db71;text-decoration:none;font-size:14px}
-.eyebrow{color:#a3d457;font-size:12px;font-weight:800;letter-spacing:.15em;margin-top:54px}
-h1{font-size:clamp(40px,6vw,72px);line-height:1.08;margin:20px 0}
-.lead{font-size:19px;line-height:1.65;color:#bac6ce;max-width:760px}
-.tags{display:flex;flex-wrap:wrap;gap:9px;margin:30px 0 45px}
-.tags span{border:1px solid #3b4b53;border-radius:50px;padding:7px 13px;font-size:12px;color:#bde78d}
-h2{font-size:30px;margin-top:68px}
-p,li{line-height:1.75;color:#bdc8d0}
-.dashboard{background:#fff;color:#17202c;border-radius:16px;overflow:hidden;box-shadow:0 20px 65px #0008}
-.dashhead{background:#1c4b9c;color:white;text-align:center;padding:24px 15px}
-.dashhead h3{margin:0 0 5px;font-size:26px}.dashhead p{color:white;font-size:14px;margin:0}
-.dashfilter{background:#eef3fa;display:flex;flex-wrap:wrap;gap:8px;padding:14px}
-.dashfilter span{padding:6px 12px;background:white;border:1px solid #d3dce9;border-radius:5px;font-size:11px;color:#253850}
-.dashbody{padding:20px;display:grid;grid-template-columns:180px 1fr;gap:14px}
-.kpis{display:grid;gap:10px}.kpi{border:1px solid #e1e7ef;border-radius:9px;padding:15px;color:#194aa0;text-align:center;font-size:12px}.kpi b{display:block;color:#142340;font-size:29px;margin-bottom:5px}
-.dashmain{min-width:0}.dashmain h4{margin:2px 0 15px;text-align:center;font-size:13px}
-table{border-collapse:collapse;width:100%;font-size:12px;color:#26364b}th{background:#214ea0;color:#fff;padding:9px}td{padding:9px;border-bottom:1px solid #e8edf4}td:not(:first-child){text-align:right}tr:nth-child(even){background:#f2f5fa}.dashchart{margin-top:16px;border:1px solid #e5ebf1;border-radius:10px;padding:20px;color:#192945}.dashchart small{color:#5a6780}.bars{display:grid;gap:14px;margin-top:17px}.bar{height:17px;background:#e6ebf5;border-radius:3px;overflow:hidden}.bar i{display:block;height:100%;background:#2788ef}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:35px 0}.metric{padding:20px;border:1px solid #34434e;border-radius:12px}.metric strong{display:block;font-size:27px;color:#b5ef6a}.metric small{color:#b9c4cd}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-.note{background:#131e2a;border-left:3px solid #a3df69;padding:20px 26px;border-radius:8px}
-a.cta{display:inline-block;background:#b5ee60;color:#111b18;padding:13px 21px;text-decoration:none;border-radius:6px;font-weight:800;margin-top:20px}
-@media(max-width:760px){.dashbody{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.dashmain{overflow-x:auto}.metrics,.two{grid-template-columns:1fr}table{min-width:560px}}
+.dre-hero{max-width:1240px;margin:auto;padding:90px 7% 65px}.hero-kicker{color:#a5ff00;font-size:11px;font-weight:900;letter-spacing:2px}.dre-hero h1{font-size:clamp(48px,7vw,92px);line-height:.98;letter-spacing:-4px;margin:20px 0 25px}.dre-hero h1 em{font-style:normal;color:#939aa5}.dre-hero p,.intro{color:#aab0bb;line-height:1.85;font-size:17px;max-width:850px}
+.project-nav{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}.project-nav a{border:1px solid #30343a;border-radius:999px;padding:9px 13px;color:#cbd1d8;font-size:11px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:32px}.metric,.step,.panel{background:#0b0d0f;border:1px solid #282d33;border-radius:8px;padding:19px}.metric b{font-size:26px;display:block}.metric span{display:block;color:#8b949e;font-size:11px;margin-top:10px}
+.story{display:grid;grid-template-columns:.46fr 1fr;gap:55px}.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:25px}.step small{color:#a5ff00}.step b{display:block;font-size:13px;margin:12px 0}.step span{font-size:11px;color:#aab0bb;line-height:1.6}
+.evidence{margin:28px 0 42px;padding:0;border:1px solid #30343a;border-radius:11px;overflow:hidden;background:#101317}.evidence img{width:100%;height:auto;display:block}.evidence figcaption{padding:15px 22px;font-size:12px;color:#9ea7b4;line-height:1.7}.evidence .missing{padding:32px;color:#aab0bb;font-size:13px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel h3{font-size:19px;margin-top:0}.panel p,.panel li{color:#9ba5b2;line-height:1.8;font-size:14px}
+.insight{border-left:3px solid #a5ff00;background:#111717;border-radius:7px;padding:23px 27px;color:#d2d9df;line-height:1.8}.case-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.case-tags span{border:1px solid #30343a;padding:9px 11px;border-radius:6px;color:#bbc4cc;font-size:11px}.privacy{border:1px solid #30421d;background:#0e130b;border-radius:8px;padding:18px;color:#bac5b1;font-size:12px;line-height:1.7}
+@media(max-width:960px){.story,.two-col{grid-template-columns:1fr}.timeline{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.dre-hero h1{letter-spacing:-2px}.timeline,.metrics{grid-template-columns:1fr}}
 </style></head>
 <body>
-<header><a class="logo" href="../../">ENGENHEIRO DE COMPUTAÇÃO <span>—</span> EDU SOUZA</a><nav><a href="../../#projetos">Projetos</a><a href="../../#stack">Stack</a><a href="../../#contato">Contato</a></nav></header>
-<main class="wrap">
-<a class="back" href="../../#projetos">← Voltar aos projetos</a>
-<div class="eyebrow">PROJETO 04 / FINANCIAL ANALYTICS · POWER BI · IA</div>
-<h1>DRE | <em>Visão Gerencial.</em></h1>
-<p class="lead">Painel gerencial para acompanhamento do desempenho financeiro: comparação entre orçamento e realizado, receitas, despesas, margem operacional e identificação de desvios, com narrativa automatizada de apoio à análise.</p>
-<div class="tags"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Modelagem dimensional</span><span>Financial Analytics</span><span>Resumo inteligente com IA</span><span>Dados 100% sintéticos</span></div>
-<div class="dashboard" role="img" aria-label="Representação ilustrativa do dashboard DRE com filtros, indicadores, tabela financeira e gráfico de resultado por entidade">
-<div class="dashhead"><h3>DRE | Visão Gerencial</h3><p>Previsto × Realizado · receitas, despesas e resultado operacional</p></div>
-<div class="dashfilter"><span>Ano: 2026</span><span>Mês: Todos</span><span>Tipo orçamento: Base</span><span>Entidade: Todas</span><span>UO: Todas</span><span>CRID: Todos</span></div>
-<div class="dashbody">
-<div class="kpis"><div class="kpi"><b>78</b>Receita realizada · R$ mi</div><div class="kpi"><b>80</b>Despesa realizada · R$ mi</div><div class="kpi"><b>(2,37)</b>Resultado · R$ mi</div><div class="kpi"><b>(3%)</b>Margem operacional</div></div>
-<div class="dashmain"><h4>DRE consolidada · R$ mil</h4><table><thead><tr><th>Grupo DRE</th><th>Previsto</th><th>Realizado</th><th>Variação</th></tr></thead><tbody>
-<tr><td><b>Receitas</b></td><td>78.358,1</td><td>77.954,5</td><td>(403,5)</td></tr>
-<tr><td>Receitas de projetos</td><td>39.264,5</td><td>39.196,7</td><td>(67,8)</td></tr>
-<tr><td>Receitas de serviços</td><td>39.093,6</td><td>38.757,8</td><td>(335,7)</td></tr>
-<tr><td><b>Despesas</b></td><td>(80.310,4)</td><td>(80.322,2)</td><td>(11,8)</td></tr>
-<tr><td><b>Resultado operacional</b></td><td>(1.952,3)</td><td>(2.367,6)</td><td>(415,3)</td></tr>
-</tbody></table>
-<div class="dashchart"><b>Resultado realizado por entidade</b><div class="bars"><div><small>Fundação Prisma · (1,14) mi</small><div class="bar"><i style="width:100%"></i></div></div><div><small>Instituto Aurora · (0,75) mi</small><div class="bar"><i style="width:66%"></i></div></div><div><small>Instituto Horizonte · (0,47) mi</small><div class="bar"><i style="width:42%"></i></div></div></div></div>
-</div></div></div>
-<p style="font-size:12px">Prévia ilustrativa em HTML baseada no relatório Power BI do projeto. Os valores representam apenas cenários simulados.</p>
-<div class="metrics"><div class="metric"><strong>R$ 78 mi</strong><small>Receitas realizadas simuladas</small></div><div class="metric"><strong>R$ 80 mi</strong><small>Despesas realizadas simuladas</small></div><div class="metric"><strong>−3%</strong><small>Margem operacional simulada</small></div></div>
-<h2>Problema e solução</h2>
-<div class="two"><div><h3>Desafio</h3><p>Comparar orçamento e execução financeira entre diferentes entidades e unidades, detalhando contas e sinalizando os principais desvios que afetam o resultado operacional.</p></div><div><h3>Abordagem</h3><p>Modelo analítico no Power BI com filtros de ano, mês, orçamento, entidade, unidade organizacional e CRID, medidas DAX de previsto, realizado, variação e margem, além de matrizes e visualizações comparativas.</p></div></div>
-<h2>Resumo inteligente</h2><div class="note"><p>O relatório inclui uma experiência de <strong>narrativa gerencial gerada por IA</strong> a partir do contexto dos filtros. O resumo descreve o resultado do período, compara receitas e despesas, destaca entidades com desvios relevantes e aponta itens para atenção.</p><p>Exemplo sintético: resultado realizado de <strong>R$ (2.367,6) mil</strong> contra orçamento de <strong>R$ (1.952,3) mil</strong>, diferença desfavorável de <strong>R$ (415,3) mil</strong>.</p></div>
-<h2>Competências demonstradas</h2>
-<ul><li>Modelagem e análise de demonstrativos de resultados (DRE).</li><li>Indicadores financeiros, orçamento versus realizado e decomposição de variações.</li><li>Desenvolvimento de relatórios com Power BI, DAX e Power Query.</li><li>Storytelling financeiro e síntese assistida por IA.</li><li>Uso exclusivo de dados sintéticos para demonstração pública.</li></ul>
-<a class="cta" href="../../#projetos">Explorar mais projetos →</a>
-</main><footer>© 2026 Edu Souza · Projeto demonstrativo com dados sintéticos</footer>
-</body></html>
+<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#historia">História do dado</a><a href="#dashboard">Dashboard</a><a href="#inteligencia">IA</a><a href="#arquitetura">Arquitetura</a></nav><a class="gh" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio/tree/main/projects/04-dre-visao-gerencial" target="_blank" rel="noreferrer">Código ↗</a></header>
+<main>
+<section class="dre-hero"><div class="hero-kicker">POWER BI · FINANCIAL ANALYTICS · DAX · IA</div><h1>DRE<br><em>Visão Gerencial.</em></h1>
+<p>Uma análise gerencial do Demonstrativo de Resultado para comparar previsto e realizado, explorar receitas, despesas e desempenho por entidade e transformar desvios financeiros em contexto para decisão. Demonstração com dados 100% sintéticos.</p>
+<div class="project-nav"><a href="#historia">Da fonte à decisão</a><a href="#dashboard">Painel real do Power BI</a><a href="#inteligencia">Resumo inteligente</a><a href="#arquitetura">Arquitetura e competências</a></div>
+<div class="metrics"><div class="metric"><b>R$ 77,95 mi</b><span>RECEITAS REALIZADAS · SIMULADO</span></div><div class="metric"><b>R$ 80,32 mi</b><span>DESPESAS REALIZADAS · SIMULADO</span></div><div class="metric"><b>R$ (2,37) mi</b><span>RESULTADO OPERACIONAL · SIMULADO</span></div><div class="metric"><b>(3%)</b><span>MARGEM OPERACIONAL · SIMULADO</span></div></div>
+</section>
+<section id="historia" class="section"><div class="tag">01 / HISTÓRIA DO DADO</div><div class="story"><div><h2>Do lançamento<br><em>à decisão.</em></h2></div><div><p class="intro">A necessidade de negócio é acompanhar a execução financeira de múltiplas entidades e unidades, detalhando grupos de receita e despesa, comparando orçamento com realizado e evidenciando variações favoráveis ou desfavoráveis.</p>
+<div class="timeline"><div class="step"><small>01</small><b>Dados sintéticos</b><span>Lançamentos financeiros e orçamento</span></div><div class="step"><small>02</small><b>Power Query</b><span>Preparação e tipagem dos dados</span></div><div class="step"><small>03</small><b>Modelo</b><span>Dimensões e medidas de resultado</span></div><div class="step"><small>04</small><b>Power BI</b><span>DRE, filtros e variações</span></div><div class="step"><small>05</small><b>IA</b><span>Síntese narrativa de indicadores</span></div></div></div></div></section>
+<section id="dashboard" class="section"><div class="tag">02 / EVIDÊNCIA DO POWER BI</div><h2>DRE por entidade.<br><em>Previsto × realizado.</em></h2><p class="intro">Captura original do relatório demonstrativo no Power BI, com filtros por ano, mês, orçamento, entidade, unidade e CRID. A matriz detalha receitas, despesas e resultado; os gráficos mostram a evolução por competência e o comparativo entre entidades.</p>
+<figure class="evidence"><img src="images/dre-visao-gerencial.png" alt="Captura real do Power BI: DRE por entidade, indicadores, resultado operacional por competência e resultado por entidade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="missing" hidden>Captura original disponível no pacote de arquivos deste projeto. O arquivo de imagem ainda precisa ser enviado ao repositório.</div><figcaption>Figura 1 — Visão Gerencial do DRE no Power BI com dados sintéticos (captura fornecida pelo autor).</figcaption></figure>
+<div class="two-col"><div class="panel"><h3>Gestão do orçamento</h3><p>Visão de receita, despesa, resultado e margem. Variação positiva representa efeito favorável no resultado; despesas são exibidas com sinal negativo na DRE.</p></div><div class="panel"><h3>Desempenho por entidade</h3><p>Comparação da Fundação Prisma, Instituto Aurora e Instituto Horizonte com análise de diferenças entre realizado e previsto por grupo financeiro.</p></div></div></section>
+<section id="inteligencia" class="section"><div class="tag">03 / INTELIGÊNCIA ARTIFICIAL</div><h2>Além do dashboard.<br><em>O resultado explicado.</em></h2><p class="intro">O recurso de resumo inteligente gera uma narrativa a partir dos valores do relatório e do contexto dos filtros, organizando resultado do período, receitas, despesas, desempenho por entidade e pontos de atenção.</p>
+<figure class="evidence"><img src="images/dre-resumo-inteligente.png" alt="Captura real do Power BI exibindo o resumo inteligente do resultado financeiro filtrado para Instituto Aurora" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.hidden=false"><div class="missing" hidden>Captura original do resumo inteligente disponível no pacote de arquivos do projeto. O arquivo de imagem ainda precisa ser enviado ao repositório.</div><figcaption>Figura 2 — Resumo inteligente no Power BI: narrativa gerada por IA para o Instituto Aurora, com desvios e pontos de atenção.</figcaption></figure>
+<div class="insight"><strong>Exemplo real da captura, com dados sintéticos:</strong> para o Instituto Aurora, o resultado realizado ficou em R$ (750,6) mil, ante R$ (733,2) mil previstos, resultando em desvio desfavorável de R$ (17,3) mil. A narrativa destaca receitas de serviços e despesas com pessoal entre os pontos de atenção.</div>
+</section>
+<section id="arquitetura" class="section"><div class="tag">04 / MODELO ANALÍTICO</div><h2>Métricas conectadas<br><em>à visão de negócio.</em></h2>
+<div class="two-col"><div class="panel"><h3>Modelagem e DAX</h3><ul><li>Receita prevista e realizada</li><li>Despesa prevista e realizada</li><li>Resultado operacional e margem</li><li>Variação em valor e análise por entidade</li><li>Contexto de filtros e competências</li></ul></div><div class="panel"><h3>Exploração gerencial</h3><ul><li>Matriz hierárquica da DRE</li><li>Filtros de entidade e orçamento</li><li>Comparativo temporal por competência</li><li>Resultados por entidade</li><li>Resumo executivo com IA</li></ul></div></div>
+<div class="case-tags"><span>Power BI</span><span>DAX</span><span>Power Query</span><span>Modelo semântico</span><span>Contabilidade gerencial</span><span>Financial Analytics</span><span>IA aplicada a BI</span></div></section>
+<section class="section"><div class="tag">05 / DADOS PUBLICÁVEIS</div><div class="privacy"><b>Privacidade por design.</b> Este estudo de caso utiliza entidades e valores fictícios, com dados exclusivamente sintéticos. As evidências visuais correspondem às capturas reais do dashboard demonstrativo enviado pelo autor. Nenhuma base corporativa confidencial é publicada.</div>
+<div class="actions"><a class="primary" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio/tree/main/projects/04-dre-visao-gerencial" target="_blank" rel="noreferrer">Ver projeto no GitHub ↗</a><a class="secondary" href="../../">Voltar ao portfólio</a></div></section>
+</main><footer>© 2026 Edu Souza · DRE Visão Gerencial · Dados sintéticos</footer></body></html>
