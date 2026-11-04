@@ -46,4 +46,20 @@ Python, pbi-tools, Power BI, TMDL, PBIR, Power Query M, DAX, Claude Code, JSON, 
 
 ## Material público
 
-Os PDFs originais contêm caminhos de ambiente e informações de sessão. O case publica apenas recortes visuais dos indicadores; os documentos completos e o pacote operacional ficam locais.
+Os PDFs do painel contêm caminhos de ambiente e informações de sessão e são demonstrados por recortes. Os documentos técnicos completos e o pacote operacional ficam locais.
+
+## Saídas inteligentes a partir da base Markdown
+
+A base canônica reúne o conhecimento extraído do produto e alimenta três entregas:
+
+- **Documentação técnica completa:** arquitetura, origens, Power Query, modelo, relacionamentos e catálogo DAX. O site mostra as regras documentadas de Variação e Variação %.
+- **Documentação de QA:** checklist, evidências, não conformidades e plano de correção. O exemplo público mostra como um apontamento de medida órfã leva à revisão de uso nos relatórios conectados.
+- **Apresentação para o negócio:** [Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf](documentos/Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf), guia de 23 páginas com tabelas, medidas, análises prontas, boas práticas e glossário.
+
+### Matriz de cruzamentos
+
+A [página 19](documentos/Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf#page=19) apresenta 28 medidas versus quatro grupos de dimensões. O site destaca a [imagem original da matriz](evidencias/matriz-cruzamentos.png) e o exemplo de análise de Realizado da página 20.
+
+As marcações são reproduzidas como geradas. A matriz resulta de análise estática e precisa de validação dos relacionamentos, dependências e efeitos dos filtros DAX no Power BI, especialmente para medidas derivadas. Não representa um teste de execução de todos os cruzamentos.
+
+Os documentos usados nesta seção são da execução de 23/10/2026. As capturas do painel anteriores são de 03/11/2026; resultados de QA de versões distintas não são intercambiáveis.
