@@ -54,11 +54,11 @@ A base canônica reúne o conhecimento extraído do produto e alimenta três ent
 
 - **Documentação técnica completa:** arquitetura, origens, Power Query, modelo, relacionamentos e catálogo DAX. O site mostra as regras documentadas de Variação e Variação %.
 - **Documentação de QA:** checklist, evidências, não conformidades e plano de correção. O exemplo público mostra como um apontamento de medida órfã leva à revisão de uso nos relatórios conectados.
-- **Apresentação para o negócio:** [Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf](documentos/Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf), guia de 23 páginas com tabelas, medidas, análises prontas, boas práticas e glossário.
+- **Apresentação para o negócio:** [PDF](documentos/Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf) e [Word](documentos/Apresentacao_Portfolio_DRE_Auditoria_v1.0.docx), guia de 22 páginas com tabelas, medidas, análises prontas, boas práticas e glossário. Edição pública com o monograma ES e créditos de Eduardo de Souza, sem timbrado ou referências institucionais.
 
 ### Matriz de cruzamentos
 
-A [página 19](documentos/Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf#page=19) apresenta 28 medidas versus quatro grupos de dimensões. O site destaca a [imagem original da matriz](evidencias/matriz-cruzamentos.png) e o exemplo de análise de Realizado da página 20.
+A [página 18](documentos/Apresentacao_Portfolio_DRE_Auditoria_v1.0.pdf#page=18) apresenta 28 medidas versus quatro grupos de dimensões. O site destaca a [imagem da matriz com identidade pessoal](evidencias/matriz-cruzamentos.png) e o exemplo de análise de Realizado da página 19. A paginação foi atualizada após a revisão do Word.
 
 As marcações são reproduzidas como geradas. A matriz resulta de análise estática e precisa de validação dos relacionamentos, dependências e efeitos dos filtros DAX no Power BI, especialmente para medidas derivadas. Não representa um teste de execução de todos os cruzamentos.
 
