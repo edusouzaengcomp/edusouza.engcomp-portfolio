@@ -9,4 +9,6 @@ Portfólio profissional focado em **Data Engineering, Analytics Engineering, Dat
 3. [Fabric Data Engineering — Wind Power Analytics](projects/03-fabric-data-engineering/) — **em desenvolvimento**
 4. [DRE — Visão Gerencial (Power BI + IA)](projects/04-dre-visao-gerencial/) — **publicado**, demonstração com dados sintéticos e comparativo previsto × realizado
 
+5. [Agente de Documentação de Produtos de Dados com Claude](projects/05-agente-documentacao-claude/) — pipeline local Python, metadados Power BI, documentação, QA com evidências e IA sob demanda.
+
 > Os projetos públicos utilizam dados públicos, sintéticos ou anonimizados. Nenhum dado corporativo confidencial é publicado.

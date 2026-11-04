@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agente de Documentação com Claude | Edu Souza</title>
+<meta name="description" content="Como construí um agente local para documentar produtos Power BI, gerar linhagem e QA com evidências e consultar a base de conhecimento com Claude.">
+<link rel="stylesheet" href="../../assets/css/style.css"><link rel="stylesheet" href="case.css">
+</head>
+<body class="doc-case">
+<header><a class="logo" href="../../">EDU SOUZA <span>·</span> PORTFÓLIO</a><nav aria-label="Seções do projeto"><a href="#historia">Contexto</a><a href="#arquitetura">Arquitetura</a><a href="#evidencias">Evidências</a><a href="#claude">Claude</a></nav><a class="gh" href="README.md">Documentação</a></header>
+<main>
+<section class="doc-hero">
+<div class="tag">PYTHON · POWER BI · CLAUDE CODE · GOVERNANÇA</div>
+<h1>Agente de Documentação<br>de Produtos de Dados</h1>
+<p>Um agente local que transforma arquivos Power BI em documentação técnica, diagramas, inventário e uma base de conhecimento consultável com Claude. Um painel acompanha a execução e mostra o QA do produto com evidências e sugestões de correção.</p>
+<div class="actions"><a class="primary" href="#evidencias">Ver execução real</a><a class="secondary" href="#arquitetura">Conhecer a arquitetura</a></div>
+<dl class="metrics"><div><dt>23/23</dt><dd>Etapas resolvidas no painel</dd></div><div><dt>16</dt><dd>Artefatos registrados</dd></div><div><dt>0</dt><dd>Chamadas Claude no modo econômico</dd></div><div><dt>1</dt><dd>Chamada máxima no enriquecimento opcional</dd></div></dl>
+<p class="caption">Indicadores da captura de 03/11/2026. Concluir a documentação não significa aprovar o produto no QA.</p>
+</section>
+<section id="historia" class="section">
+<div class="tag">01 / HISTÓRIA DO PRODUTO</div><h2>Do arquivo fechado<br>ao conhecimento rastreável.</h2>
+<div class="story"><div><h3>O problema</h3><p>Um relatório pode estar funcionando e ainda esconder regras DAX, dependências, origens e decisões de modelagem. Documentar tudo manualmente exige percorrer o modelo, relacionar evidências e manter os documentos sincronizados.</p></div><div><h3>O que construímos</h3><p>Uma aplicação local com orquestração Python, extração de metadados Power BI, geração documental e auditoria determinística. O Claude Code recebe contexto selecionado para interpretar o produto e responder perguntas sobre a base extraída.</p></div></div>
+<ol class="pipeline"><li><b>Preservar</b><span>Cópia do original e integridade</span></li><li><b>Extrair</b><span>Modelo, relatório e consultas</span></li><li><b>Inventariar</b><span>Objetos, DAX e dependências</span></li><li><b>Documentar</b><span>Base canônica e diagramas</span></li><li><b>Auditar</b><span>Critérios, evidências e críticas</span></li><li><b>Consumir</b><span>Documentos, painel e conversa</span></li></ol>
+</section>
+<section id="arquitetura" class="section">
+<div class="tag">02 / ARQUITETURA E ENGENHARIA</div><h2>Python executa.<br>Claude interpreta e conversa.</h2>
+<div class="architecture" aria-label="Fluxo de processamento"><p><b>Entrada</b> PBIX / PBIT / PBIP ou pasta extraída</p><span aria-hidden="true">↓</span><p><b>Pipeline local</b> Python + pbi-tools → TMDL / PBIR / Power Query M</p><span aria-hidden="true">↓</span><p><b>Conhecimento</b> Inventário + DAX + linhagem + diagramas + base Markdown</p><span aria-hidden="true">↓</span><p><b>Saídas</b> Documentação DOCX/PDF + QA + apresentação + painel HTML</p><p class="ai-branch"><b>Claude sob demanda</b> Base selecionada → enriquecimento estruturado ou resposta à pergunta</p></div>
+<div class="deliverables"><article><h3>Extração e rastreabilidade</h3><p>Cópia do arquivo de entrada, verificação de integridade, PBIT, metadados do modelo e do relatório. Pastas separadas por produto e execução preservam a origem de cada resultado.</p></article><article><h3>Base de conhecimento</h3><p>Inventário técnico, tabelas, colunas, medidas e relacionamentos alimentam a base canônica Markdown. Diagramas e linhagem ajudam a explicar as dependências.</p></article><article><h3>Geração documental</h3><p>Documentação técnica, documentação de QA e apresentação para o negócio, com formatação e conversão para PDF. O painel reúne progresso, artefatos, logs e erros.</p></article><article><h3>QA com evidências</h3><p>Checklist e críticas relacionam objeto, critério, evidência, severidade e sugestão. A ausência de evidência aparece como não verificável e exige revisão.</p></article></div>
+</section>
+<section id="evidencias" class="section">
+<div class="tag">03 / EXECUÇÃO REAL</div><h2>O que o agente entregou.</h2>
+<p>O produto demonstrativo é o Portfolio DRE Auditoria. As imagens abaixo são recortes dos PDFs fornecidos do painel, com os indicadores da execução e a visão de QA.</p>
+<figure><img src="evidencias/execucao.png" alt="Painel real: documentação concluída, progresso de 100%, 23 de 23 etapas resolvidas e 16 artefatos" loading="lazy"><figcaption>Visão geral da execução. O processamento local pode concluir mesmo com o enriquecimento Claude desativado.</figcaption></figure>
+<div class="qa-story"><div><h3>Execução concluída.<br>Produto com pendências.</h3><p>O QA registrou <strong>28,6% de conformidade entre os 7 itens avaliados</strong>: 2 conformes e 5 não conformes. Outros 54 dos 61 critérios aplicáveis ficaram sem evidência suficiente no arquivo.</p><p>Foram registrados 88 apontamentos, sendo 10 de severidade alta. Esse resultado caracteriza a análise do produto de exemplo; não representa a precisão do agente.</p><p>As críticas sinalizam, por exemplo, divisões DAX sem DIVIDE e medidas sem descrição. São verificações estáticas para triagem e revisão técnica, sem comprovação automática de impacto em execução.</p></div><figure><img src="evidencias/qa.png" alt="QA do produto: não conforme, 28,6%, 7 avaliados, 2 conformes, 5 não conformes, 54 não verificáveis e 88 críticas" loading="lazy"><figcaption>QA do produto analisado: cobertura da avaliação e conformidade são indicadores diferentes.</figcaption></figure></div>
+<details><summary>Artefatos organizados por execução</summary><ul><li>01_Original: cópia e integridade.</li><li>02_PBIT: template do produto.</li><li>03_Evidencias: modelo e relatório extraídos.</li><li>04_Diagramas: representação do modelo e linhagem.</li><li>05_Documentacao: documentos e base canônica.</li><li>06_Inventario: inventário técnico estruturado.</li><li>07_Logs: rastreabilidade da execução.</li><li>08_Artefato_Conhecimento: enriquecimento semântico opcional.</li><li>09_QA: resumo, checklist, evidências e críticas.</li></ul></details>
+</section>
+<section id="claude" class="section">
+<div class="tag">04 / IA APLICADA AO PRODUTO</div><h2>Contexto antes<br>da resposta.</h2>
+<div class="story"><div><h3>Enriquecimento opcional</h3><p>O modo econômico documenta sem chamadas ao Claude. Quando habilitado, o enriquecimento recebe um JSON técnico compacto e devolve conteúdo estruturado em no máximo uma chamada por produto. Python mantém a geração dos documentos.</p></div><div><h3>Pergunte ao Produto</h3><p>A arquitetura prevê seleção de até seis trechos da base canônica por pergunta e uma interação de turno único com Claude Code. A conversa fica separada do pipeline documental e depende de autenticação válida.</p></div></div>
+<div class="questions"><p>Quais medidas compõem o resultado da DRE?</p><p>Quais dependências preciso revisar antes de alterar uma medida?</p><p>Quais pendências de documentação foram identificadas?</p></div><p class="caption">Exemplos de uso pretendido. Os PDFs demonstram documentação e QA; a captura não comprova uma resposta de chat nem uma chamada de enriquecimento bem-sucedida.</p>
+</section>
+<section class="section">
+<div class="tag">05 / APRENDIZADOS E EVOLUÇÃO</div><h2>Documentação como<br>parte do produto de dados.</h2>
+<p>A separação entre extração, regras determinísticas e interpretação por IA torna o processamento menos dependente de cota e disponibilidade do modelo. A base canônica conecta a engenharia à documentação e oferece contexto reutilizável para a conversa.</p>
+<p>As próximas evoluções são ampliar a cobertura verificável do checklist, validar respostas do chat com referências aos objetos do modelo e comparar versões para identificar mudanças no produto.</p>
+<div class="case-tags"><span>Python</span><span>Power BI</span><span>pbi-tools</span><span>TMDL / PBIR</span><span>DAX / M</span><span>Claude Code</span><span>DOCX / PDF</span><span>Data Quality</span></div>
+<p class="caption">As evidências públicas usam recortes dos PDFs. Os originais permanecem locais por conterem informações de ambiente e sessão. O escopo comprovado é a execução local; publicação em SharePoint e notificações são integrações separadas.</p>
+<div class="actions"><a class="primary" href="README.md">Ler documentação do case</a><a class="secondary" href="../../">Voltar ao portfólio</a></div>
+</section>
+</main><footer>© 2026 Edu Souza · Agente de Documentação de Produtos de Dados com Claude</footer>
+</body></html>

@@ -1,0 +1,49 @@
+# Agente de Documentação de Produtos de Dados com Claude
+
+Case de engenharia e IA aplicada à documentação e governança de produtos Power BI. Segue a narrativa do case Databricks: contexto, fluxo, saídas, IA, arquitetura e evidências.
+
+## Problema e objetivo
+
+Transformar arquivos PBIX/PBIT/PBIP em conhecimento rastreável sobre origens, modelo, medidas e dependências. Automatizar inventário, diagramas, documentação e QA, mantendo uma base para consulta com Claude.
+
+## O que foi construído
+
+Aplicação local com painel HTML, orquestração Python e extração por pbi-tools. O pipeline preserva o original, extrai TMDL/PBIR/M, inventaria o modelo, documenta DAX e dependências, gera diagramas e base canônica Markdown e produz documentação e QA em artefatos separados.
+
+```text
+Power BI → cópia e integridade → Python + pbi-tools
+       → metadados → inventário → diagramas → base Markdown
+       → documentação técnica + QA + apresentação + painel
+
+Base selecionada → Claude Code → enriquecimento ou conversa
+```
+
+## Papel do Claude
+
+Python executa o pipeline documental. No modo econômico, são zero chamadas Claude; enriquecimento opcional usa no máximo uma chamada com JSON técnico compacto. A arquitetura de conversa seleciona até seis trechos da base por pergunta e depende de autenticação válida. Os PDFs fornecidos não demonstram uma resposta de chat ou enriquecimento bem-sucedido; essas capacidades estão descritas na arquitetura do agente.
+
+## Evidências
+
+Capturas de 03/11/2026 dos PDFs do painel fornecidos pelo autor:
+
+- [Visão geral](evidencias/execucao.png): 23/23 etapas resolvidas e 16 artefatos.
+- [QA](evidencias/qa.png): 7 critérios avaliados de 61 aplicáveis; 2 conformes, 5 não conformes e 54 não verificáveis; 28,6% de conformidade entre avaliados.
+- 88 críticas registradas, sendo 10 altas. São apontamentos estáticos sujeitos a revisão técnica, sem comprovação automática de impacto em execução.
+
+Os JSONs da execução V10.8 fornecida confirmam os números de QA. Os PDFs capturam uma execução posterior, em 03/11, embora estejam armazenados na pasta datada de 23/10. Não se atribui o tempo de uma retomada ao processamento integral de um produto novo.
+
+## Entregas e organização
+
+Original preservado, PBIT, evidências do modelo/relatório, diagramas, documentação e base de conhecimento, inventário JSON, logs, enriquecimento opcional e QA com checklist, evidências, não conformidades e sugestões.
+
+## Limites e próximos passos
+
+Documentação concluída não equivale a produto aprovado. A falta de evidências limita a cobertura do QA. Ampliar critérios verificáveis, validar respostas com referências aos objetos e comparar versões são próximos passos. O escopo comprovado é local; SharePoint e notificações são integrações separadas.
+
+## Tecnologias
+
+Python, pbi-tools, Power BI, TMDL, PBIR, Power Query M, DAX, Claude Code, JSON, Markdown, DOCX/PDF e painel HTML.
+
+## Material público
+
+Os PDFs originais contêm caminhos de ambiente e informações de sessão. O case publica apenas recortes visuais dos indicadores; os documentos completos e o pacote operacional ficam locais.
