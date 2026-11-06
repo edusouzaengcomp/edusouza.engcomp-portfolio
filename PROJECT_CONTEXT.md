@@ -76,9 +76,19 @@ Objetivo: demonstrar ingestão, Dataflows Gen2, pipelines, Lakehouse, notebooks,
 ## Site
 Visual: dark, moderno, minimalista e técnico.
 Mensagem principal: “Dados que geram decisão.”
-Homepage deve destacar Data & Analytics Engineer e os cinco cases.
+Homepage deve destacar Data & Analytics Engineer e os cases publicados.
 GitHub Pages: index.html na raiz.
 Não inventar métricas profissionais ou resultados não comprovados.
 
 ## Diretriz para o Codex
 Antes de alterar o projeto, leia este arquivo e README.md. Preserve a estrutura, confidencialidade e posicionamento. Faça alterações incrementais, mantenha o site responsivo e não faça push de informações sensíveis.
+
+## Case publicado — TechRisk Intelligence POC
+
+Adicionado em 06/11/2026 como sexto case, preservando Wind Power Analytics.
+Caminho: projects/06-fabric-techrisk-intelligence/. Produto de dados para supervisão de riscos
+tecnológicos de uma instituição fictícia, com Fabric Medallion, PySpark, Delta,
+modelo semântico Direct Lake e Power BI. Dados corporativos, scores e flags da
+carga demonstrada são simulados. O link do relatório exige conta e permissões;
+não alterar compartilhamento nem apresentar o relatório como acesso anônimo.
+Não afirmar RLS validado, coleta pública completa ou pipeline diário aprovado.

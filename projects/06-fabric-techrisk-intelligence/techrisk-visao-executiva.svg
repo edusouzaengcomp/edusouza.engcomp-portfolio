@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect x="0" y="0" width="220" height="1080" rx="0" fill="#FFFFFF"/>
+<rect x="25" y="30" width="42" height="42" rx="10" fill="#0F766E"/>
+<text x="34" y="60" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="600" fill="#F4F6FA">TR</text>
+<text x="25" y="110" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="600" fill="#172B4D">TECHRISK</text>
+<text x="25" y="138" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#66758C">INTELLIGENCE</text>
+<rect x="15" y="186" width="190" height="60" rx="9" fill="#FFFFFF"/>
+<rect x="15" y="186" width="4" height="60" rx="2" fill="#0F766E"/>
+<text x="29" y="218" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#0F766E">01</text>
+<text x="67" y="218" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#172B4D">Executivo</text>
+<text x="29" y="301" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#66758C">02</text>
+<text x="67" y="301" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#66758C">Vulnerabilidades</text>
+<text x="29" y="384" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#66758C">03</text>
+<text x="67" y="384" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#66758C">Controles</text>
+<text x="29" y="467" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#66758C">04</text>
+<text x="67" y="467" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#66758C">Resiliência</text>
+<text x="29" y="550" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#66758C">05</text>
+<text x="67" y="550" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#66758C">Anomalias</text>
+<text x="29" y="633" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#66758C">06</text>
+<text x="67" y="633" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#66758C">Governança</text>
+<text x="25" y="956" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="600" fill="#66758C">SEGUNDA LINHA</text>
+<text x="25" y="986" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#66758C">Política simulada risk-v1</text>
+<text x="25" y="1010" font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="400" fill="#66758C">Revisão humana obrigatória</text>
+<text x="252" y="43" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="600" fill="#66758C">COOPERATIVA FINANCEIRA HORIZONTE  /  INSTITUIÇÃO FICTÍCIA</text>
+<text x="252" y="98" font-family="Segoe UI,Arial,sans-serif" font-size="42" font-weight="600" fill="#172B4D">Visão executiva</text>
+<text x="254" y="132" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="400" fill="#66758C">Decisões e prioridades da segunda linha</text>
+<rect x="1425" y="28" width="292" height="37" rx="8" fill="#FFFFFF" stroke="#0F766E"/>
+<text x="1439" y="53" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#0F766E">SIMULAÇÃO PARA PORTFÓLIO</text>
+<text x="1590" y="103" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" fill="#66758C">Referência 05/11/2026</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="2" points="252,1018 1880,1018"/>
+<text x="254" y="1048" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#66758C">DADOS CORPORATIVOS E SCORES SINTÉTICOS  •  SYNTHETIC_REPLAY  •  SEM COMPROVAÇÃO DE EXPLORAÇÃO REAL</text>
+<text x="1825" y="1048" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#66758C">01 / 06</text>
+<rect x="252.0" y="166" width="392.0" height="130" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+<rect x="274.0" y="187" width="5" height="25" rx="2" fill="#2563EB"/>
+<text x="291.0" y="207" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="400" fill="#66758C">Exposições abertas</text>
+<text x="276.0" y="260" font-family="Segoe UI,Arial,sans-serif" font-size="40" font-weight="600" fill="#2563EB">972</text>
+<text x="276.0" y="282" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#66758C">Estoque na data de referência</text>
+<rect x="664.0" y="166" width="392.0" height="130" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+<rect x="686.0" y="187" width="5" height="25" rx="2" fill="#B42318"/>
+<text x="703.0" y="207" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="400" fill="#66758C">Exposições críticas</text>
+<text x="688.0" y="260" font-family="Segoe UI,Arial,sans-serif" font-size="40" font-weight="600" fill="#B42318">58</text>
+<text x="688.0" y="282" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#66758C">Faixa CRÍTICO • política simulada</text>
+<rect x="1076.0" y="166" width="392.0" height="130" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+<rect x="1098.0" y="187" width="5" height="25" rx="2" fill="#B45309"/>
+<text x="1115.0" y="207" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="400" fill="#66758C">Fora do SLA</text>
+<text x="1100.0" y="260" font-family="Segoe UI,Arial,sans-serif" font-size="40" font-weight="600" fill="#B45309">69,9%</text>
+<text x="1100.0" y="282" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#66758C">597 vencidas / 854 com SLA conhecido</text>
+<rect x="1488.0" y="166" width="392.0" height="130" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+<rect x="1510.0" y="187" width="5" height="25" rx="2" fill="#6D28D9"/>
+<text x="1527.0" y="207" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="400" fill="#66758C">KEV externo vencido</text>
+<text x="1512.0" y="260" font-family="Segoe UI,Arial,sans-serif" font-size="40" font-weight="600" fill="#6D28D9">30</text>
+<text x="1512.0" y="282" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#66758C">Flag KEV desta fixture é simulada</text>
+<rect x="252" y="320" width="816" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+<text x="276" y="359" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" fill="#172B4D">Evolução do backlog</text>
+<text x="276" y="388" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Estoque diário • não somar snapshots</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="2" points="290,611.0 1015,611.0"/>
+<text x="286" y="603.0" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#66758C">0</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="2" points="290,563.5 1015,563.5"/>
+<text x="286" y="555.5" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#66758C">250</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="2" points="290,516.0 1015,516.0"/>
+<text x="286" y="508.0" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#66758C">500</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="2" points="290,468.5 1015,468.5"/>
+<text x="286" y="460.5" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#66758C">750</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="2" points="290,421.0 1015,421.0"/>
+<text x="286" y="413.0" font-family="Segoe UI,Arial,sans-serif" font-size="14" font-weight="400" fill="#66758C">1.000</text>
+<polyline fill="none" stroke="#2563EB" stroke-width="4" points="290.0,609.29 298.14606741573033,606.82 306.29213483146066,603.21 314.438202247191,601.12 322.5842696629214,598.84 330.7303370786517,596.37 338.87640449438203,594.85 347.02247191011236,592.57 355.1685393258427,590.67 363.314606741573,587.25 371.4606741573034,584.78 379.6067415730337,580.79 387.75280898876406,578.7 395.8988764044944,574.14 404.0449438202247,572.62 412.19101123595505,569.2 420.3370786516854,567.11 428.48314606741576,563.5 436.62921348314603,562.17 444.7752808988764,558.37 452.92134831460675,555.71 461.0674157303371,552.67 469.2134831460674,549.82 477.35955056179773,547.73 485.5056179775281,546.02 493.6516853932584,545.45 501.7977528089888,544.12 509.9438202247191,541.08 518.0898876404494,537.66 526.2359550561798,536.14 534.3820224719101,534.81 542.5280898876405,533.67 550.6741573033707,532.34 558.8202247191011,531.39 566.9662921348315,529.87 575.1123595505618,527.4 583.2584269662921,525.12 591.4044943820224,523.41 599.5505617977528,521.3199999999999 607.6966292134832,519.42 615.8426966292135,517.52 623.9887640449438,516.38 632.1348314606741,513.72 640.2808988764045,512.39 648.4269662921348,511.25 656.5730337078652,508.78 664.7191011235955,506.88 672.8651685393259,505.74 681.0112359550562,504.03 689.1573033707865,501.18 697.3033707865168,499.09000000000003 705.4494382022472,497.57 713.5955056179776,495.48 721.7415730337079,493.39 729.8876404494382,492.44 738.0337078651685,490.73 746.1797752808989,489.59000000000003 754.3258426966293,485.6 762.4719101123595,482.94 770.6179775280899,481.23 778.7640449438202,479.33000000000004 786.9101123595506,476.86 795.056179775281,474.96000000000004 803.2022471910112,473.82 811.3483146067416,470.78 819.4943820224719,468.5 827.6404494382023,467.74 835.7865168539325,466.03 843.9325842696629,463.37 852.0786516853933,460.71000000000004 860.2247191011236,458.24 868.370786516854,456.15 876.5168539325842,455.01 884.6629213483146,452.91999999999996 892.8089887640449,451.02 900.9550561797753,450.45 909.1011235955057,449.31 917.2471910112359,447.03 925.3932584269663,443.99 933.5393258426966,445.13 941.685393258427,443.23 949.8314606741573,439.62 957.9775280898876,438.86 966.123595505618,436.77 974.2696629213483,434.68 982.4157303370787,433.53999999999996 990.561797752809,431.07 998.7078651685393,428.6 1006.8539325842696,426.89 1015.0,426.32"/>
+<polyline fill="none" stroke="#B45309" stroke-width="4" points="290.0,611.0 298.14606741573033,611.0 306.29213483146066,611.0 314.438202247191,611.0 322.5842696629214,611.0 330.7303370786517,611.0 338.87640449438203,611.0 347.02247191011236,610.62 355.1685393258427,610.43 363.314606741573,610.43 371.4606741573034,610.24 379.6067415730337,610.24 387.75280898876406,609.86 395.8988764044944,609.86 404.0449438202247,609.86 412.19101123595505,609.29 420.3370786516854,608.15 428.48314606741576,606.44 436.62921348314603,605.11 444.7752808988764,604.54 452.92134831460675,603.59 461.0674157303371,602.83 469.2134831460674,602.07 477.35955056179773,601.31 485.5056179775281,600.36 493.6516853932584,599.79 501.7977528089888,599.41 509.9438202247191,598.65 518.0898876404494,596.56 526.2359550561798,596.37 534.3820224719101,595.8 542.5280898876405,594.47 550.6741573033707,592.76 558.8202247191011,592.38 566.9662921348315,590.48 575.1123595505618,588.77 583.2584269662921,587.44 591.4044943820224,585.92 599.5505617977528,584.02 607.6966292134832,582.12 615.8426966292135,581.93 623.9887640449438,579.65 632.1348314606741,577.37 640.2808988764045,574.71 648.4269662921348,573.38 656.5730337078652,570.53 664.7191011235955,569.58 672.8651685393259,568.25 681.0112359550562,567.68 689.1573033707865,564.83 697.3033707865168,562.93 705.4494382022472,560.84 713.5955056179776,558.75 721.7415730337079,557.99 729.8876404494382,555.71 738.0337078651685,554.19 746.1797752808989,552.29 754.3258426966293,550.77 762.4719101123595,548.49 770.6179775280899,546.4 778.7640449438202,545.64 786.9101123595506,543.55 795.056179775281,542.22 803.2022471910112,541.65 811.3483146067416,538.23 819.4943820224719,536.71 827.6404494382023,535.76 835.7865168539325,534.24 843.9325842696629,533.86 852.0786516853933,532.34 860.2247191011236,529.49 868.370786516854,527.78 876.5168539325842,526.45 884.6629213483146,524.9300000000001 892.8089887640449,523.79 900.9550561797753,522.46 909.1011235955057,520.1800000000001 917.2471910112359,518.85 925.3932584269663,516.76 933.5393258426966,515.24 941.685393258427,514.1 949.8314606741573,512.39 957.9775280898876,510.87 966.123595505618,508.78 974.2696629213483,506.88 982.4157303370787,505.36 990.561797752809,503.08 998.7078651685393,501.18 1006.8539325842696,498.9 1015.0,497.57"/>
+<text x="290" y="644" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#66758C">08 AGO</text>
+<text x="940" y="644" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#66758C">05 NOV</text>
+<text x="550" y="650" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#2563EB">● Abertas</text>
+<text x="710" y="650" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#B45309">● Vencidas</text>
+<rect x="1090" y="320" width="790" height="350" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+<text x="1114" y="359" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" fill="#172B4D">Concentração por serviço</text>
+<text x="1114" y="388" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Top 6 • exposições abertas</text>
+<text x="1110" y="407.0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Serviço simulado 05</text>
+<rect x="1355" y="390.0" width="398" height="19" rx="4" fill="#FFFFFF"/>
+<rect x="1355" y="390.0" width="398.0" height="19" rx="4" fill="#2563EB"/>
+<text x="1765" y="407.0" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="600" fill="#172B4D">106</text>
+<text x="1110" y="445.0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Serviço simulado 06</text>
+<rect x="1355" y="428.0" width="398" height="19" rx="4" fill="#FFFFFF"/>
+<rect x="1355" y="428.0" width="319.1509433962264" height="19" rx="4" fill="#2563EB"/>
+<text x="1765" y="445.0" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="600" fill="#172B4D">85</text>
+<text x="1110" y="483.0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Serviço simulado 08</text>
+<rect x="1355" y="466.0" width="398" height="19" rx="4" fill="#FFFFFF"/>
+<rect x="1355" y="466.0" width="315.39622641509436" height="19" rx="4" fill="#2563EB"/>
+<text x="1765" y="483.0" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="600" fill="#172B4D">84</text>
+<text x="1110" y="521.0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Serviço simulado 07</text>
+<rect x="1355" y="504.0" width="398" height="19" rx="4" fill="#FFFFFF"/>
+<rect x="1355" y="504.0" width="315.39622641509436" height="19" rx="4" fill="#2563EB"/>
+<text x="1765" y="521.0" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="600" fill="#172B4D">84</text>
+<text x="1110" y="559.0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Serviço simulado 01</text>
+<rect x="1355" y="542.0" width="398" height="19" rx="4" fill="#FFFFFF"/>
+<rect x="1355" y="542.0" width="315.39622641509436" height="19" rx="4" fill="#2563EB"/>
+<text x="1765" y="559.0" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="600" fill="#172B4D">84</text>
+<text x="1110" y="597.0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Serviço simulado 04</text>
+<rect x="1355" y="580.0" width="398" height="19" rx="4" fill="#FFFFFF"/>
+<rect x="1355" y="580.0" width="304.1320754716981" height="19" rx="4" fill="#2563EB"/>
+<text x="1765" y="597.0" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="600" fill="#172B4D">81</text>
+<rect x="252" y="694" width="1628" height="300" rx="14" fill="#FFFFFF" stroke="#E2E8F0"/>
+<text x="276" y="733" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="600" fill="#172B4D">Prioridades com rastreabilidade</text>
+<text x="276" y="762" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#66758C">Exemplos da classificação • evidência por episódio e data</text>
+<rect x="275" y="746" width="1580" height="37" rx="5" fill="#FFFFFF"/>
+<text x="284.0" y="773" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#66758C">Episódio</text>
+<text x="600.0" y="773" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#66758C">Serviço</text>
+<text x="916.0" y="773" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#66758C">Identificador sintético</text>
+<text x="1232.0" y="773" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#66758C">Faixa de risco</text>
+<text x="1548.0" y="773" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" fill="#66758C">Evidência</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="1" points="276,818 1856,818"/>
+<text x="284.0" y="808" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EP-00001</text>
+<text x="600.0" y="808" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SVC-001</text>
+<text x="916.0" y="808" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SIM-VULN-0001</text>
+<text x="1232.0" y="808" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#B42318">● CRÍTICO</text>
+<text x="1548.0" y="808" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EV-EP-00001-20261105</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="1" points="276,850 1856,850"/>
+<text x="284.0" y="840" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EP-00112</text>
+<text x="600.0" y="840" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SVC-001</text>
+<text x="916.0" y="840" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SIM-VULN-0008</text>
+<text x="1232.0" y="840" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#B42318">● CRÍTICO</text>
+<text x="1548.0" y="840" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EV-EP-00112-20261105</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="1" points="276,882 1856,882"/>
+<text x="284.0" y="872" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EP-00135</text>
+<text x="600.0" y="872" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SVC-001</text>
+<text x="916.0" y="872" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SIM-VULN-0007</text>
+<text x="1232.0" y="872" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#B42318">● CRÍTICO</text>
+<text x="1548.0" y="872" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EV-EP-00135-20261105</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="1" points="276,914 1856,914"/>
+<text x="284.0" y="904" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EP-00169</text>
+<text x="600.0" y="904" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SVC-001</text>
+<text x="916.0" y="904" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SIM-VULN-0001</text>
+<text x="1232.0" y="904" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#B42318">● CRÍTICO</text>
+<text x="1548.0" y="904" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EV-EP-00169-20261105</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="1" points="276,946 1856,946"/>
+<text x="284.0" y="936" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EP-00223</text>
+<text x="600.0" y="936" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SVC-001</text>
+<text x="916.0" y="936" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SIM-VULN-0007</text>
+<text x="1232.0" y="936" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#B42318">● CRÍTICO</text>
+<text x="1548.0" y="936" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EV-EP-00223-20261105</text>
+<polyline fill="none" stroke="#E2E8F0" stroke-width="1" points="276,978 1856,978"/>
+<text x="284.0" y="968" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EP-00231</text>
+<text x="600.0" y="968" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SVC-001</text>
+<text x="916.0" y="968" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">SIM-VULN-0007</text>
+<text x="1232.0" y="968" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#B42318">● CRÍTICO</text>
+<text x="1548.0" y="968" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#172B4D">EV-EP-00231-20261105</text>
+</svg>

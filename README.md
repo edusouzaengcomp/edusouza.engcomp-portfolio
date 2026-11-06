@@ -11,4 +11,6 @@ Portfólio profissional focado em **Data Engineering, Analytics Engineering, Dat
 
 5. [Agente de Documentação de Produtos de Dados com Claude](projects/05-agente-documentacao-claude/) — pipeline local Python, metadados Power BI, documentação, QA com evidências e IA sob demanda.
 
+6. [Fabric Data Engineering — TechRisk Intelligence POC](projects/06-fabric-techrisk-intelligence/) — arquitetura Medallion no Fabric, regras de risco, modelo semântico e relatório Power BI com dados corporativos sintéticos.
+
 > Os projetos públicos utilizam dados públicos, sintéticos ou anonimizados. Nenhum dado corporativo confidencial é publicado.
