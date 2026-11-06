@@ -1,20 +1,28 @@
 # Fabric Data Engineering - TechRisk Intelligence POC
 
-Produto demonstrativo de supervisão de riscos tecnológicos da Cooperativa Financeira Horizonte, instituição fictícia.
+## Dados para priorizar riscos de Segurança da Informação
 
-## Demonstração
+Equipes de Segurança da Informação precisam decidir diariamente quais vulnerabilidades corrigir primeiro, quais controles revisar e quais riscos levar à gestão. Quando inventário, achados, evidências e planos de ação ficam espalhados, torna-se difícil relacionar uma exposição ao serviço afetado, acompanhar atrasos e justificar prioridades.
 
-- [Estudo de caso](https://edusouzaengcomp.github.io/edusouza.engcomp-portfolio/projects/06-fabric-techrisk-intelligence/)
-- [Relatório Power BI](https://app.powerbi.com/groups/579273dc-a5d7-4c30-bf3a-78636a21dd5e/reports/db28acdd-998f-4050-a904-81de59500c15/02_vulnerabilidades?experience=power-bi) — exige conta e permissões; não é um link de acesso anônimo.
-- A imagem da página é uma prévia estática, identificada como tal.
+O TechRisk Intelligence reúne esses dados em uma visão integrada. A solução relaciona vulnerabilidades à criticidade dos ativos e à exposição à internet, acompanha prazos de correção, identifica testes de controles com falha e evidencia desvios nos testes de continuidade. Cada classificação pode ser rastreada até o episódio e sua evidência, apoiando a investigação e a supervisão pela segunda linha de defesa.
+
+Na base simulada de 05/11/2026, foram identificadas **972 exposições abertas, sendo 58 críticas e 597 vencidas**. Entre os controles, **35 testes apresentaram falha e 150 registros tinham evidências com validade vencida**. Nos testes de continuidade, **6 ultrapassaram a meta de recuperação**. Esses resultados mostram como o produto ajuda a transformar dados dispersos em uma agenda de análise: o que exige atenção, onde está concentrado e o que precisa ser acompanhado.
+
+Construída no Microsoft Fabric, com arquitetura Medallion, PySpark, Delta Lake e Power BI, a POC demonstra como a engenharia de dados pode apoiar decisões de Segurança da Informação com critérios explícitos, histórico e rastreabilidade. A solução orienta a priorização e o acompanhamento; a avaliação e o aceite dos riscos permanecem sob responsabilidade humana.
+
+**Demonstração com instituição fictícia e dados corporativos, scores e flags de ameaça simulados.**
+
+## Estudo de caso
+
+[Abrir o projeto no portfólio](https://edusouzaengcomp.github.io/edusouza.engcomp-portfolio/projects/06-fabric-techrisk-intelligence/)
+
+A página apresenta a dor, a solução, indicadores da simulação, arquitetura e uma prévia estática identificada como tal. Os botões de acesso ao relatório Power BI foram removidos.
 
 ## Arquitetura
 
 Fixture sintética → Bronze em arquivos JSON com manifesto/hash → Silver Delta/PySpark → Gold dimensional e snapshots → modelo semântico Direct Lake → Power BI/DAX.
 
-## Evidências da simulação
-
-Snapshot 05/11/2026: 972 exposições abertas, 58 críticas, 597 vencidas, 854 com SLA conhecido (69,9% fora do SLA) e 30 KEV externos vencidos. A Gold verificada contém 47.398 exposições-dia. Indicadores corporativos e flags KEV desta fixture são simulados.
+O produto reúne visões executiva, vulnerabilidades, controles, resiliência, anomalias e governança. A Gold verificada contém 47.398 exposições-dia; estoques devem ser consumidos por snapshot, sem somar os dias.
 
 ## Escopo e limites
 
