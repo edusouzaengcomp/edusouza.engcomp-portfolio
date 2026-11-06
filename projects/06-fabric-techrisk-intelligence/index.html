@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Fabric Data Engineering — TechRisk Intelligence POC: Medallion, PySpark, Delta Lake, modelo semântico e Power BI para riscos tecnológicos, com dados simulados.">
+<meta name="description" content="TechRisk Intelligence: dados para priorizar riscos de Segurança da Informação, acompanhar vulnerabilidades, controles e continuidade com evidências rastreáveis. POC no Microsoft Fabric com dados simulados.">
 <title>Fabric Data Engineering - TechRisk Intelligence POC | Edu Souza</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 <style>
@@ -16,15 +16,17 @@
 <main>
 <section class="case-hero">
 <div class="eyebrow">MICROSOFT FABRIC · DATA ENGINEERING · RISK ANALYTICS</div>
-<h1>TechRisk Intelligence<br><em>Engenharia de dados<br>para decisões de risco.</em></h1>
-<p><strong>Fabric Data Engineering - TechRisk Intelligence POC</strong> é uma prova de conceito que transforma inventário, exposições, controles e testes de continuidade em um produto analítico para a segunda linha de defesa de uma instituição financeira fictícia.</p>
+<h1>TechRisk Intelligence<br><em>Dados para priorizar riscos<br>de Segurança da Informação.</em></h1>
+<p>Equipes de Segurança da Informação precisam decidir diariamente quais vulnerabilidades corrigir primeiro, quais controles revisar e quais riscos levar à gestão. Quando inventário, achados, evidências e planos de ação ficam espalhados, torna-se difícil relacionar uma exposição ao serviço afetado, acompanhar atrasos e justificar prioridades.</p>
 <div class="actions"><a class="primary" href="https://app.powerbi.com/groups/579273dc-a5d7-4c30-bf3a-78636a21dd5e/reports/db28acdd-998f-4050-a904-81de59500c15/02_vulnerabilidades?experience=power-bi" target="_blank" rel="noopener noreferrer">Abrir relatório no Power BI ↗</a><a class="secondary" href="#arquitetura">Conhecer a arquitetura ↓</a></div>
 <p class="muted">O relatório conectado requer uma conta com permissão no Power BI. A prévia abaixo pode ser consultada sem login; nenhuma permissão do workspace foi alterada para este portfólio.</p>
 <div class="case-note"><strong>SIMULAÇÃO PARA PORTFÓLIO.</strong> A Cooperativa Financeira Horizonte é fictícia. Ativos, achados, incidentes, controles, scores e flags KEV da carga demonstrada são sintéticos.</div>
 </section>
 <section id="demonstracao" class="section">
-<div class="tag">01 / PRODUTO DE DADOS</div><h2>Do backlog de exposições<br>à visão executiva.</h2>
-<p class="copy">O produto reúne seis perspectivas: executivo, vulnerabilidades, controles, resiliência, anomalias e governança. Indicadores, tendências e tabelas com status apoiam a priorização e permitem voltar à evidência de cada episódio.</p>
+<div class="tag">01 / DA DOR À DECISÃO</div><h2>Uma visão integrada<br>para orientar prioridades.</h2>
+<p class="copy">O TechRisk Intelligence reúne esses dados em uma visão integrada. A solução relaciona vulnerabilidades à criticidade dos ativos e à exposição à internet, acompanha prazos de correção, identifica testes de controles com falha e evidencia desvios nos testes de continuidade. Cada classificação pode ser rastreada até o episódio e sua evidência, apoiando a investigação e a supervisão pela segunda linha de defesa.</p>
+<p class="copy">Na base simulada, foram identificadas <strong>972 exposições abertas, sendo 58 críticas e 597 vencidas</strong>. Entre os controles, <strong>35 testes apresentaram falha e 150 registros tinham evidências com validade vencida</strong>. Nos testes de continuidade, <strong>6 ultrapassaram a meta de recuperação</strong>. Esses resultados mostram como o produto ajuda a transformar dados dispersos em uma agenda de análise: o que exige atenção, onde está concentrado e o que precisa ser acompanhado.</p>
+<p class="copy">Construída no Microsoft Fabric, com arquitetura Medallion, PySpark, Delta Lake e Power BI, a POC demonstra como a engenharia de dados pode apoiar decisões de Segurança da Informação com critérios explícitos, histórico e rastreabilidade. A solução orienta a priorização e o acompanhamento; a avaliação e o aceite dos riscos permanecem sob responsabilidade humana.</p>
 <figure class="preview"><img src="techrisk-visao-executiva.svg" width="1920" height="1080" alt="Prévia visual da visão executiva TechRisk com indicadores, tendência, serviços e evidências, usando dados simulados" loading="lazy"><figcaption>Prévia estática do layout claro, com dados simulados. O relatório conectado está disponível pelo botão de acesso ao Power BI; a imagem não executa consultas.</figcaption></figure>
 <div class="metrics" aria-label="Indicadores do snapshot sintético de 5 de novembro de 2026"><div class="metric"><strong>972</strong><span>Exposições abertas</span></div><div class="metric"><strong>58</strong><span>Exposições críticas</span></div><div class="metric"><strong>69,9%</strong><span>Fora do SLA conhecido<br>597 de 854 exposições</span></div><div class="metric"><strong>30</strong><span>KEV externo vencido<br>Flag desta fixture é simulada</span></div></div>
 <p class="muted">Referência dos números: snapshot de 05/11/2026, reconciliado entre o replay local e a publicação Gold. São resultados da simulação, não métricas de uma instituição real.</p>
@@ -41,7 +43,7 @@
 <section class="section">
 <div class="tag">04 / DADOS E ESCOPO</div><h2>Demonstração transparente.<br>Limites documentados.</h2>
 <div class="copy scope"><p>A execução demonstrada é um <strong>SYNTHETIC_REPLAY</strong>. As fontes públicas <a href="https://nvd.nist.gov/developers/vulnerabilities" target="_blank" rel="noopener noreferrer">NVD</a>, <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA KEV</a> e <a href="https://www.first.org/epss/" target="_blank" rel="noopener noreferrer">FIRST EPSS</a> fazem parte da evolução da ingestão. Os identificadores SIM-VULN, scores e flags usados nesta carga não são registros públicos reais.</p><p>O case demonstra notebooks Medallion executados, modelo semântico e consumo no Power BI. Validação de RLS com identidade Viewer, execução encadeada do pipeline e atualização agendada ponta a ponta permanecem etapas de aceite. A POC não certifica conformidade regulatória nem comprova exploração de vulnerabilidades.</p></div>
-<div class="actions"><a class="primary" href="https://app.powerbi.com/groups/579273dc-a5d7-4c30-bf3a-78636a21dd5e/reports/db28acdd-998f-4050-a904-81de59500c15/02_vulnerabilidades?experience=power-bi" target="_blank" rel="noopener noreferrer">Explorar no Power BI ↗</a><a class="secondary" href="../../#projetos">Voltar aos projetos</a></div>
+<div class="actions"><a class="secondary" href="../../#projetos">Voltar aos projetos</a></div>
 </section>
 </main><footer>© 2026 Edu Souza · Fabric Data Engineering — TechRisk Intelligence POC · Dados corporativos sintéticos</footer>
 </body></html>
