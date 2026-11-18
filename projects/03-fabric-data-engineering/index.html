@@ -2,54 +2,121 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Microsoft Fabric Data Engineering — Wind Power Analytics">
-<title>Fabric Data Engineering | Edu Souza</title>
+<meta name="description" content="WindPowerAnalytics: projeto de Engenharia de Dados com Microsoft Fabric, arquitetura Medallion, pipelines, Delta Lake e Power BI.">
+<title>WindPowerAnalytics | Microsoft Fabric · Edu Souza</title>
 <link rel="stylesheet" href="../../assets/css/style.css">
 <style>
-.status{display:inline-flex;align-items:center;gap:8px;border:1px solid #665113;background:#171307;color:#f3c84b;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:800;margin-top:20px}
-.status:before{content:"";width:8px;height:8px;border-radius:50%;background:#f3c84b;box-shadow:0 0 14px rgba(243,200,75,.6)}
-.fabric-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:35px}
-.fabric-flow div{border:1px solid #292d33;border-radius:8px;background:#0b0d0f;padding:20px}
-.fabric-flow small{color:#a5ff00}.fabric-flow b{display:block;margin:8px 0}.fabric-flow span{font-size:11px;color:#868d96;line-height:1.6}
-.dev-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}.dev-card{border:1px solid #292d33;border-radius:8px;background:#0b0d0f;padding:22px}.dev-card h3{margin-top:0}.dev-card p{color:#9298a1;line-height:1.75;font-size:13px}
-@media(max-width:850px){.fabric-flow{grid-template-columns:1fr}.dev-grid{grid-template-columns:1fr}}
+:root{--wind-accent:#a5ff00;--wind-line:#292d33;--wind-muted:#a3adb6}
+.wind-hero{padding-bottom:55px}
+.wind-hero p{max-width:820px}
+.wind-status{display:inline-flex;align-items:center;gap:9px;margin-top:20px;padding:9px 14px;border:1px solid #356231;border-radius:40px;background:#102014;color:#b3f5a9;font-size:12px;font-weight:800}
+.wind-status:before{content:"";height:8px;width:8px;border-radius:50%;background:#83e66c}
+.wind-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0 0}
+.wind-fact,.wind-card,.wind-panel{border:1px solid var(--wind-line);border-radius:10px;background:#0b0d0f;padding:22px}
+.wind-fact small,.wind-card small{display:block;color:var(--wind-accent);font-size:11px;letter-spacing:.09em;text-transform:uppercase}
+.wind-fact strong{display:block;font-size:25px;margin-top:10px}
+.wind-fact span,.wind-card p,.wind-panel p{color:var(--wind-muted);line-height:1.7;font-size:13px}
+.wind-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px;margin-top:30px}
+.wind-step{border:1px solid var(--wind-line);border-radius:10px;padding:18px;background:linear-gradient(145deg,#10160d,#0b0d0f)}
+.wind-step b{display:block;font-size:17px;margin:12px 0}.wind-step small{color:var(--wind-accent)}.wind-step span{color:var(--wind-muted);font-size:12px;line-height:1.6;display:block}
+.wind-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
+.wind-card h3{margin:11px 0}
+.wind-panel{margin-top:22px}
+.wind-pills{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.wind-pills span{border:1px solid #3d4740;border-radius:100px;padding:8px 12px;font-size:12px;color:#d5e3d0}
+.wind-dashboard{border:1px solid var(--wind-line);background:#0c0f12;border-radius:12px;padding:24px;margin-top:24px}
+.wind-dashboard .heading{display:flex;justify-content:space-between;gap:14px;align-items:center}
+.wind-dashboard .heading span{color:var(--wind-muted);font-size:12px}
+.wind-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.wind-kpi{background:#161b20;padding:18px;border-radius:8px;border-top:3px solid #91d949}
+.wind-kpi small{color:#b2b9bd;font-size:11px;display:block;text-transform:uppercase}
+.wind-kpi strong{display:block;font-size:clamp(19px,3vw,28px);margin-top:10px;color:#f8fafb}
+.wind-bars{display:flex;align-items:flex-end;gap:14px;height:160px;padding:12px 4px;border-bottom:1px solid #54606a}
+.wind-bars i{flex:1;display:block;background:linear-gradient(0deg,#406b38,#a5ff00);border-radius:4px 4px 0 0;min-width:5px}
+.wind-note{font-size:11px;color:#aab2ba;margin-top:17px}
+.wind-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.wind-actions a{display:inline-flex;text-decoration:none;padding:13px 20px;border:1px solid #66746b;border-radius:7px;color:#fff;font-size:13px;font-weight:700}
+.wind-actions a:first-child{background:#a5ff00;border-color:#a5ff00;color:#10160d}
+@media(max-width:900px){.wind-facts,.wind-kpis{grid-template-columns:repeat(2,1fr)}.wind-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.wind-facts,.wind-kpis,.wind-grid,.wind-flow{grid-template-columns:1fr}.wind-dashboard{padding:15px}}
 </style>
 </head>
 <body>
-<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#arquitetura">Arquitetura</a><a href="#etapas">Etapas</a></nav><a class="gh" href="https://github.com/edusouzaengcomp/edusouza.engcomp-portfolio" target="_blank">GitHub ↗</a></header>
+<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#arquitetura">Arquitetura</a><a href="#pipeline">Pipeline</a><a href="#produto">Produto</a></nav><a class="gh" href="https://github.com/edusouzaengcomp" target="_blank" rel="noreferrer">GitHub ↗</a></header>
 <main>
-<section class="case-hero">
-<div class="eyebrow">MICROSOFT FABRIC · DATA ENGINEERING · WIND POWER</div>
-<h1>Fabric Data Engineering<br><em>Wind Power Analytics.</em></h1>
-<p>Projeto prático de engenharia de dados que será desenvolvido durante o curso <strong>Microsoft Fabric - A Formação Completa 2026</strong>. A solução acompanhará o fluxo completo do dado, da ingestão no Lakehouse até o modelo semântico, Power BI e orquestração automatizada.</p>
-<div class="status">EM DESENVOLVIMENTO</div>
+<section class="case-hero wind-hero">
+<div class="eyebrow">PROJETO 03 · MICROSOFT FABRIC · DATA ENGINEERING · POWER BI</div>
+<h1>WindPowerAnalytics<br><em>Da origem à decisão.</em></h1>
+<p>Uma solução de Engenharia de Dados de ponta a ponta para acompanhar a produção de energia eólica, integrando ingestão, arquitetura Medallion, transformações em PySpark, modelagem dimensional, orquestração e um produto analítico em Power BI.</p>
+<div class="wind-status">PROJETO IMPLEMENTADO · ESTUDO DE CASO</div>
+<div class="wind-facts">
+<div class="wind-fact"><small>Arquitetura</small><strong>3 camadas</strong><span>Bronze, Silver e Gold</span></div>
+<div class="wind-fact"><small>Gold</small><strong>5 tabelas</strong><span>4 dimensões e 1 fato</span></div>
+<div class="wind-fact"><small>Analytics</small><strong>5 visões</strong><span>Visão geral, produção, operação, vento e turbinas</span></div>
+<div class="wind-fact"><small>Orquestração</small><strong>Pipeline</strong><span>Ingestão e atualização com acompanhamento de execuções</span></div>
+</div>
 </section>
-
 <section id="arquitetura" class="section">
-<div class="tag">01 / ARQUITETURA PREVISTA</div>
-<h2>Da ingestão<br><em>à automação.</em></h2>
-<div class="fabric-flow">
-<div><small>01</small><b>Ingestão</b><span>CSV e fonte web chegando ao Lakehouse Bronze.</span></div>
-<div><small>02</small><b>Medallion</b><span>Notebooks processando Bronze → Silver → Gold.</span></div>
-<div><small>03</small><b>Modelo Semântico</b><span>Camada analítica preparada para consumo.</span></div>
-<div><small>04</small><b>Power BI</b><span>Análise da produção de eletricidade das turbinas eólicas.</span></div>
-<div><small>05</small><b>Pipeline</b><span>Orquestração e atualização automática diária.</span></div>
+<div class="tag">01 / ARQUITETURA DA SOLUÇÃO</div>
+<h2>Do dado bruto<br><em>ao Lakehouse.</em></h2>
+<p>Arquitetura construída no Microsoft Fabric com Lakehouses separados por camada. O fluxo organiza os registros de turbinas eólicas desde a captura até a disponibilização dos dados para análise.</p>
+<div class="wind-flow" role="list" aria-label="Fluxo da arquitetura de dados">
+<div class="wind-step"><small>01 · ORIGEM</small><b>Fontes de dados</b><span>Arquivo CSV e coleta web de dados de turbinas e produção eólica.</span></div>
+<div class="wind-step"><small>02 · BRONZE</small><b>Dados brutos</b><span>Ingestão e persistência no Lakehouse Bronze, preservando o dado recebido.</span></div>
+<div class="wind-step"><small>03 · SILVER</small><b>Transformações</b><span>Notebooks PySpark para tratamento, tipagem e padronização de datas, horários e indicadores.</span></div>
+<div class="wind-step"><small>04 · GOLD</small><b>Modelo dimensional</b><span>Tabelas Delta organizadas em fato e dimensões para consumo analítico.</span></div>
+<div class="wind-step"><small>05 · CONSUMO</small><b>Power BI</b><span>Modelo semântico e relatório para acompanhar produção e desempenho operacional.</span></div>
+</div>
+<div class="wind-pills"><span>Microsoft Fabric</span><span>OneLake</span><span>Lakehouse</span><span>PySpark</span><span>Delta Lake</span><span>SQL</span><span>Power BI</span></div>
+<div class="wind-panel">
+<h3>Modelo Gold · Esquema estrela</h3>
+<p><strong>fact_wind_power</strong> centraliza os registros da produção e se relaciona às dimensões <strong>dim_date</strong>, <strong>dim_time</strong>, <strong>dim_turbine</strong> e <strong>dim_operational_status</strong>. As dimensões oferecem contexto temporal, características das turbinas e status operacionais.</p>
 </div>
 </section>
-
-<section id="etapas" class="section">
-<div class="tag">02 / ESCOPO DO PROJETO</div>
-<h2>O que será<br><em>implementado.</em></h2>
-<div class="dev-grid">
-<div class="dev-card"><h3>Ingestão de Dados</h3><p>Carregar dados de arquivo CSV no Lakehouse Bronze e organizar a camada de entrada.</p></div>
-<div class="dev-card"><h3>Bronze → Silver → Gold</h3><p>Criar notebooks para limpeza, transformação e evolução dos dados na arquitetura Medallion.</p></div>
-<div class="dev-card"><h3>Modelo Semântico + Power BI</h3><p>Construir o modelo analítico e relatórios para acompanhar a produção de energia eólica.</p></div>
-<div class="dev-card"><h3>Atualização Web</h3><p>Desenvolver notebook para recuperar informações atualizadas diariamente de uma fonte na internet.</p></div>
-<div class="dev-card"><h3>Pipeline de Orquestração</h3><p>Automatizar a execução das etapas e configurar agendamento recorrente, como às 7h diariamente.</p></div>
-<div class="dev-card"><h3>Entrega</h3><p>Documentar arquitetura, notebooks, pipeline, modelo e relatório conforme o projeto evoluir.</p></div>
+<section id="pipeline" class="section">
+<div class="tag">02 / ORQUESTRAÇÃO E MONITORAMENTO</div>
+<h2>Da ingestão<br><em>à atualização.</em></h2>
+<p>O fluxo operacional reúne a coleta diária <strong>Get Daily Wind Turbine Data</strong>, o processamento das camadas do Lakehouse e a atualização do modelo semântico. O monitoramento identifica falhas e sucessos para apoiar a operação.</p>
+<div class="wind-grid">
+<div class="wind-card"><small>ETAPA 01</small><h3>Ingestão diária</h3><p>Coleta e carga de novos dados de turbinas para a camada de entrada, com acompanhamento do processamento no Fabric.</p></div>
+<div class="wind-card"><small>ETAPA 02</small><h3>Notebooks e transformação</h3><p>Aplicação de regras de limpeza, geração de atributos temporais e preparação do modelo Gold em tabelas Delta.</p></div>
+<div class="wind-card"><small>ETAPA 03</small><h3>Modelo semântico</h3><p>Disponibilização e atualização dos dados analíticos utilizados pelo Power BI, com atenção a mudanças de schema.</p></div>
+<div class="wind-card"><small>ETAPA 04</small><h3>Observabilidade</h3><p>Monitoramento de execuções no Fabric e comunicação de sucesso ou falha por notificações no Teams e e-mail.</p></div>
 </div>
-<div class="case-tags" style="margin-top:28px"><span>Microsoft Fabric</span><span>Lakehouse</span><span>Notebooks</span><span>Pipelines</span><span>Power BI</span><span>PySpark</span><span>SQL</span></div>
+<div class="wind-panel"><h3>Confiabilidade operacional</h3><p>Durante a implementação, a solução também exigiu tratamento de evolução do schema Delta, alinhamento entre dimensões e modelo semântico e observação de limites de capacidade Spark. Esses pontos fazem parte da experiência prática de operação da plataforma.</p></div>
+</section>
+<section id="produto" class="section">
+<div class="tag">03 / PRODUTO DE DADOS · POWER BI</div>
+<h2>Informação pronta<br><em>para análise.</em></h2>
+<p>O relatório final integra cinco perspectivas: <strong>Visão geral, Produção, Operação, Vento e Turbinas</strong>. Os painéis permitem comparar produção acumulada, registros online, condições do vento e desempenho das turbinas monitoradas.</p>
+<div class="wind-dashboard" aria-label="Resumo dos indicadores do relatório Wind Power Analytics">
+<div class="heading"><strong>WIND POWER ANALYTICS · VISÃO GERAL</strong><span>Recorte exibido no relatório enviado</span></div>
+<div class="wind-kpis">
+<div class="wind-kpi"><small>Produção acumulada</small><strong>8,83 Mi</strong></div>
+<div class="wind-kpi"><small>Registros online</small><strong>90,75%</strong></div>
+<div class="wind-kpi"><small>Vento médio</small><strong>13,40</strong></div>
+<div class="wind-kpi"><small>Turbinas</small><strong>3</strong></div>
+</div>
+<p>Exemplo de evolução diária da produção, apresentado de forma ilustrativa para demonstrar o conceito visual do dashboard.</p>
+<div class="wind-bars" aria-hidden="true">
+<i style="height:66%"></i><i style="height:74%"></i><i style="height:64%"></i><i style="height:82%"></i><i style="height:78%"></i><i style="height:88%"></i><i style="height:68%"></i><i style="height:95%"></i><i style="height:73%"></i><i style="height:85%"></i><i style="height:90%"></i><i style="height:77%"></i>
+</div>
+<div class="wind-note">Valores dos cartões extraídos do relatório do projeto (junho de 2024). As unidades de produção e velocidade do vento não foram especificadas na fonte; o gráfico acima é ilustrativo.</div>
+</div>
+<div class="wind-grid">
+<div class="wind-card"><small>VISÃO 01</small><h3>Produção</h3><p>Evolução diária e horária, participação por turbina, média diária e registros sem produção.</p></div>
+<div class="wind-card"><small>VISÃO 02</small><h3>Operação</h3><p>Percentual de registros online, registros de falha, manutenção e distribuição do tempo por status.</p></div>
+<div class="wind-card"><small>VISÃO 03</small><h3>Vento</h3><p>Velocidade média, valores mínimo e máximo, direção predominante e relação entre vento e produção.</p></div>
+<div class="wind-card"><small>VISÃO 04</small><h3>Turbinas</h3><p>Comparação entre turbinas, capacidade cadastrada, produção e disponibilidade observada.</p></div>
+</div>
+</section>
+<section class="section">
+<div class="tag">04 / RESULTADO E APRENDIZADOS</div>
+<h2>Engenharia aplicada<br><em>à decisão.</em></h2>
+<p>O WindPowerAnalytics demonstra a conexão entre <strong>engenharia, automação, modelagem e experiência analítica</strong>. A entrega não termina na criação de tabelas: inclui preparação do modelo semântico, monitoramento de falhas e visualização orientada às perguntas do negócio.</p>
+<div class="wind-actions"><a href="../../">Voltar ao portfólio ↗</a><a href="https://github.com/edusouzaengcomp" target="_blank" rel="noreferrer">Ver GitHub ↗</a></div>
 </section>
 </main>
-<footer>© 2026 Edu Souza · Projeto em desenvolvimento</footer>
-</body></html>
+<footer>© 2026 Edu Souza · WindPowerAnalytics · Microsoft Fabric</footer>
+</body>
+</html>
