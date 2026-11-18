@@ -39,10 +39,19 @@
 .wind-actions a:first-child{background:#a5ff00;border-color:#a5ff00;color:#10160d}
 @media(max-width:900px){.wind-facts,.wind-kpis{grid-template-columns:repeat(2,1fr)}.wind-flow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.wind-facts,.wind-kpis,.wind-grid,.wind-flow{grid-template-columns:1fr}.wind-dashboard{padding:15px}}
+
+.wind-timeline{display:grid;gap:14px;margin:26px 0}
+.wind-timeline article{display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;padding:20px;border:1px solid #292d33;border-radius:10px;background:#0b0d0f}
+.wind-timeline article>span{display:grid;place-items:center;background:#182315;color:#a5ff00;height:45px;width:45px;border-radius:12px;font-weight:800}
+.wind-timeline article h3{margin:0 0 7px}.wind-timeline article p{margin:0;color:#a3adb6;font-size:13px;line-height:1.75}
+.wind-resource{padding:30px;margin:30px 0;background:linear-gradient(125deg,#142018,#0b0d0f);border:1px solid #456a39;border-radius:14px}
+.wind-resource h3{margin-top:0}.wind-resource p{max-width:780px;line-height:1.8;color:#b6c1b8}
+.wind-resource a{display:inline-flex;text-decoration:none;border:1px solid #a5ff00;color:#a5ff00;padding:12px 17px;border-radius:8px;font-weight:700;font-size:13px}
+@media(max-width:600px){.wind-timeline article{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#arquitetura">Arquitetura</a><a href="#pipeline">Pipeline</a><a href="#produto">Produto</a></nav><a class="gh" href="https://github.com/edusouzaengcomp" target="_blank" rel="noreferrer">GitHub ↗</a></header>
+<header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#arquitetura">Arquitetura</a><a href="#pipeline">Pipeline</a><a href="#produto">Produto</a><a href="#jornada">Jornada</a></nav><a class="gh" href="https://github.com/edusouzaengcomp" target="_blank" rel="noreferrer">GitHub ↗</a></header>
 <main>
 <section class="case-hero wind-hero">
 <div class="eyebrow">PROJETO 03 · MICROSOFT FABRIC · DATA ENGINEERING · POWER BI</div>
@@ -110,8 +119,37 @@
 <div class="wind-card"><small>VISÃO 04</small><h3>Turbinas</h3><p>Comparação entre turbinas, capacidade cadastrada, produção e disponibilidade observada.</p></div>
 </div>
 </section>
+
+<section id="jornada" class="section">
+<div class="tag">04 / JORNADA COMPLETA · CASE PARA LINKEDIN</div>
+<h2>Da arquitetura ao<br><em>produto de dados.</em></h2>
+<p>Uma leitura em sequência, do desenho da solução até o relatório entregue. A apresentação completa do WindPowerAnalytics foi organizada como um carrossel de 12 páginas para o LinkedIn.</p>
+<div class="wind-timeline">
+<article><span>01</span><div><h3>Visão do problema e arquitetura</h3><p>Objetivo: integrar indicadores de geração eólica, vento e disponibilidade operacional. O desenho mostra a origem dos dados, o OneLake e o caminho de transformação até o Power BI.</p></div></article>
+<article><span>02</span><div><h3>Ingestão e camada Bronze</h3><p>Recebimento dos dados CSV/web no Lakehouse Bronze. Esta camada preserva os registros de origem e serve como ponto de partida para o processamento.</p></div></article>
+<article><span>03</span><div><h3>Tratamento e camada Silver</h3><p>Notebooks PySpark estruturam e padronizam informações temporais, de produção, status de operação e características das turbinas.</p></div></article>
+<article><span>04</span><div><h3>Camada Gold e esquema estrela</h3><p>Publicação das cinco tabelas Delta: dim_date, dim_time, dim_turbine, dim_operational_status e fact_wind_power. A modelagem organiza as métricas para consumo pelo modelo semântico.</p></div></article>
+<article><span>05</span><div><h3>Orquestração por pipeline</h3><p>O processo Get Daily Wind Turbine Data automatiza a ingestão e participa do fluxo de atualização. Os notebooks e a atualização do modelo semântico compõem a esteira analítica.</p></div></article>
+<article><span>06</span><div><h3>Monitoramento, falhas e sucesso</h3><p>O Monitoring Hub permite acompanhar as execuções, enquanto alertas no Teams e e-mail comunicam os resultados do processamento e da atualização do modelo semântico.</p></div></article>
+<article><span>07</span><div><h3>Produto final: Power BI</h3><p>O relatório reúne Visão Geral, Produção, Operação, Vento e Turbinas, transformando a base Gold em acompanhamento operacional e análise de desempenho.</p></div></article>
+</div>
+<div class="wind-resource">
+<h3>Apresentação técnica para LinkedIn · 12 páginas</h3>
+<p>A apresentação reúne a história da arquitetura, os passos do pipeline, o monitoramento e as telas do produto analítico. O arquivo PDF está preparado; sua publicação como download direto neste site depende de adicionar o arquivo <code>WindPowerAnalytics_Jornada_Fabric_LinkedIn.pdf</code> ao diretório <code>assets/docs/</code> do repositório.</p>
+<p><strong>Enquanto isso, explore o estudo de caso completo nesta página</strong> e o resumo do dashboard logo acima.</p>
+<a href="#arquitetura">Revisar a arquitetura ↗</a>
+</div>
+<div class="wind-grid">
+<div class="wind-card"><small>RELATÓRIO · CAPA</small><h3>Inteligência Eólica</h3><p>Apresentação do Wind Power Analytics e da visão integrada de produção, operação e performance.</p></div>
+<div class="wind-card"><small>RELATÓRIO · VISÃO GERAL</small><h3>Indicadores principais</h3><p>Produção acumulada de 8,83 Mi, 90,75% de registros online, vento médio de 13,40 e três turbinas monitoradas no recorte apresentado.</p></div>
+<div class="wind-card"><small>RELATÓRIO · PRODUÇÃO</small><h3>Evolução e participação</h3><p>Análises por dia, hora e turbina; média diária, melhor dia e registros com produção zero.</p></div>
+<div class="wind-card"><small>RELATÓRIO · OPERAÇÃO</small><h3>Disponibilidade e ocorrências</h3><p>Participação dos estados operacionais, registros de falhas e manutenção por turbina.</p></div>
+<div class="wind-card"><small>RELATÓRIO · VENTO</small><h3>Condições ambientais</h3><p>Velocidade e direção do vento, faixas de velocidade e relação com a produção.</p></div>
+<div class="wind-card"><small>RELATÓRIO · TURBINAS</small><h3>Comparação entre ativos</h3><p>Capacidade cadastrada, produção acumulada e indicadores operacionais comparativos.</p></div>
+</div>
+</section>
 <section class="section">
-<div class="tag">04 / RESULTADO E APRENDIZADOS</div>
+<div class="tag">05 / RESULTADO E APRENDIZADOS</div>
 <h2>Engenharia aplicada<br><em>à decisão.</em></h2>
 <p>O WindPowerAnalytics demonstra a conexão entre <strong>engenharia, automação, modelagem e experiência analítica</strong>. A entrega não termina na criação de tabelas: inclui preparação do modelo semântico, monitoramento de falhas e visualização orientada às perguntas do negócio.</p>
 <div class="wind-actions"><a href="../../">Voltar ao portfólio ↗</a><a href="https://github.com/edusouzaengcomp" target="_blank" rel="noreferrer">Ver GitHub ↗</a></div>
