@@ -59,7 +59,15 @@
 .wind-slide p{margin:0;font-size:13px;color:#b2bfc2;line-height:1.75}
 .wind-img-notice{color:#e4bb61;font-size:12px;margin:12px 0}
 @media(max-width:800px){.wind-slides{grid-template-columns:1fr}}
-.wind-gif-frame{border:1px solid #315b4b;border-radius:14px;background:#09141a;padding:14px;margin-top:24px}.wind-gif-frame img{display:block;width:100%;height:auto;border-radius:8px}.wind-gif-caption{font-size:12px;color:#a3b8ba;line-height:1.65;padding:10px 5px}.wind-gif-frame .asset-pending{color:#e8c873;font-size:13px;line-height:1.7;padding:18px}.wind-gif-actions{display:flex;gap:10px;flex-wrap:wrap;padding:8px 5px}.wind-gif-actions a{color:#a5ff00;text-decoration:underline}</style>
+.wind-gif-frame{border:1px solid #315b4b;border-radius:14px;background:#09141a;padding:14px;margin-top:24px}.wind-gif-frame img{display:block;width:100%;height:auto;border-radius:8px}.wind-gif-caption{font-size:12px;color:#a3b8ba;line-height:1.65;padding:10px 5px}.wind-gif-frame .asset-pending{color:#e8c873;font-size:13px;line-height:1.7;padding:18px}.wind-gif-actions{display:flex;gap:10px;flex-wrap:wrap;padding:8px 5px}.wind-gif-actions a{color:#a5ff00;text-decoration:underline}.wind-gif-frame [hidden]{display:none!important}
+.wind-fallback{padding:clamp(22px,4vw,40px);background:linear-gradient(130deg,#11211b,#0c1518);border-radius:10px}
+.wind-fallback small{color:#a5ff00;font-size:11px;font-weight:800;letter-spacing:.1em}
+.wind-fallback h3{font-size:clamp(20px,3vw,27px);margin:12px 0}
+.wind-fallback p{color:#c1cdd0;line-height:1.7;max-width:720px;font-size:14px}
+.wind-fallback-steps{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}
+.wind-fallback-steps span{border:1px solid #3b6253;padding:9px 12px;border-radius:7px;color:#ddf0e6;font-size:12px}
+.wind-fallback-link{display:inline-block;color:#a5ff00;font-weight:700;text-decoration:underline;text-underline-offset:4px;font-size:13px}
+</style>
 </head>
 <body>
 <header><a class="logo" href="../../">EDU SOUZA <span>—</span> PORTFÓLIO</a><nav><a href="#apresentacao">Apresentação</a><a href="#arquitetura">Arquitetura</a><a href="#pipeline">Pipeline</a><a href="#produto">Produto</a><a href="#jornada">Jornada</a></nav><a class="gh" href="https://github.com/edusouzaengcomp" target="_blank" rel="noreferrer">GitHub ↗</a></header>
@@ -76,7 +84,25 @@
 <div class="wind-fact"><small>Orquestração</small><strong>Pipeline</strong><span>Ingestão e atualização com acompanhamento de execuções</span></div>
 </div>
 </section>
-<section id="apresentacao" class="section"><div class="tag">00 / APRESENTAÇÃO ANIMADA</div><h2>WindPowerAnalytics<br><em>Uma jornada visual.</em></h2><p>Assista à sequência apresentada no material técnico: origem dos dados, arquitetura Microsoft Fabric, camadas Bronze, Silver e Gold, pipeline e alertas, modelo semântico e, ao final, cada uma das cinco páginas do dashboard Power BI.</p><div class="wind-gif-frame"><img id="windGif" src="../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif" loading="eager" alt="GIF de 12 etapas do WindPowerAnalytics, mostrando arquitetura, pipeline, observabilidade, modelo semântico e páginas do Power BI" onload="document.getElementById('windGifActions').hidden=false" onerror="this.hidden=true;document.getElementById('windGifPending').hidden=false"><div id="windGifPending" class="asset-pending" hidden>O espaço da apresentação animada já está preparado. Para exibir o GIF, publique o arquivo <code>WindPowerAnalytics_Historia_Completa.gif</code> na pasta <code>assets/images/windpoweranalytics/</code> deste repositório.</div><div id="windGifActions" class="wind-gif-actions" hidden><a href="../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif" target="_blank" rel="noreferrer">Abrir animação em tamanho maior ↗</a></div><div class="wind-gif-caption">Narrativa em 12 cenas, mantendo as telas reais da solução. Abaixo, cada etapa está documentada com explicações técnicas.</div></div></section>
+<section id="apresentacao" class="section">
+<div class="tag">00 / JORNADA DO PROJETO</div>
+<h2>WindPowerAnalytics<br><em>Uma jornada visual.</em></h2>
+<p>Da origem dos dados à análise de produção eólica: arquitetura Microsoft Fabric, camadas Bronze, Silver e Gold, pipeline, monitoramento, modelo semântico e cinco páginas do Power BI.</p>
+<div class="wind-gif-frame" id="windPresentation">
+  <img id="windGif" src="../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif" loading="eager" alt="Animação das 12 etapas do WindPowerAnalytics: arquitetura, pipeline, monitoramento, modelo semântico e páginas do Power BI" onload="document.getElementById('windGifActions').hidden=false;document.getElementById('windGifFallback').hidden=true" onerror="this.hidden=true;document.getElementById('windGifActions').hidden=true;document.getElementById('windGifFallback').hidden=false">
+  <div id="windGifFallback" class="wind-fallback" hidden>
+    <small>VISÃO GERAL DO PROJETO</small>
+    <h3>Da engenharia de dados ao produto analítico</h3>
+    <p>Acompanhe as etapas reais da solução nas seções a seguir, enquanto a apresentação animada não está disponível nesta página.</p>
+    <div class="wind-fallback-steps" aria-label="Etapas do projeto">
+      <span>Origem dos dados</span><span>Bronze / Silver / Gold</span><span>Pipeline e monitoramento</span><span>Modelo semântico</span><span>Power BI</span>
+    </div>
+    <a href="#arquitetura" class="wind-fallback-link">Explorar arquitetura e implementação ↓</a>
+  </div>
+  <div id="windGifActions" class="wind-gif-actions" hidden><a href="../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif" target="_blank" rel="noopener noreferrer">Abrir animação em tamanho maior ↗</a></div>
+  <div class="wind-gif-caption">O estudo de caso abaixo documenta a arquitetura, a orquestração e a entrega analítica do WindPowerAnalytics.</div>
+</div>
+</section>
 <section id="arquitetura" class="section">
 <div class="tag">01 / ARQUITETURA DA SOLUÇÃO</div>
 <h2>Do dado bruto<br><em>ao Lakehouse.</em></h2>
