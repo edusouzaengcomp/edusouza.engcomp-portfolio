@@ -89,7 +89,7 @@
 <h2>WindPowerAnalytics<br><em>Uma jornada visual.</em></h2>
 <p>Da origem dos dados à análise de produção eólica: arquitetura Microsoft Fabric, camadas Bronze, Silver e Gold, pipeline, monitoramento, modelo semântico e cinco páginas do Power BI.</p>
 <div class="wind-gif-frame" id="windPresentation">
-  <img id="windGif" src="../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif" loading="eager" alt="Animação das 12 etapas do WindPowerAnalytics: arquitetura, pipeline, monitoramento, modelo semântico e páginas do Power BI" onload="document.getElementById('windGifActions').hidden=false;document.getElementById('windGifFallback').hidden=true" onerror="this.hidden=true;document.getElementById('windGifActions').hidden=true;document.getElementById('windGifFallback').hidden=false">
+  <img id="windGif" src="../../assets/images/WindPowerAnalytics_Historia_Completa.gif" loading="eager" alt="Animação das 12 etapas do WindPowerAnalytics: arquitetura, pipeline, monitoramento, modelo semântico e páginas do Power BI" onload="document.getElementById('windGifActions').hidden=false;document.getElementById('windGifFallback').hidden=true;document.getElementById('windGifOpen').href=this.currentSrc" onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif'}else{this.hidden=true;document.getElementById('windGifActions').hidden=true;document.getElementById('windGifFallback').hidden=false}">
   <div id="windGifFallback" class="wind-fallback" hidden>
     <small>VISÃO GERAL DO PROJETO</small>
     <h3>Da engenharia de dados ao produto analítico</h3>
@@ -99,7 +99,7 @@
     </div>
     <a href="#arquitetura" class="wind-fallback-link">Explorar arquitetura e implementação ↓</a>
   </div>
-  <div id="windGifActions" class="wind-gif-actions" hidden><a href="../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif" target="_blank" rel="noopener noreferrer">Abrir animação em tamanho maior ↗</a></div>
+  <div id="windGifActions" class="wind-gif-actions" hidden><a id="windGifOpen" href="../../assets/images/WindPowerAnalytics_Historia_Completa.gif" target="_blank" rel="noopener noreferrer">Abrir animação em tamanho maior ↗</a></div>
   <div class="wind-gif-caption">O estudo de caso abaixo documenta a arquitetura, a orquestração e a entrega analítica do WindPowerAnalytics.</div>
 </div>
 </section>
