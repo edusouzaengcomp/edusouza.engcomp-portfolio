@@ -6,7 +6,7 @@ Portfólio profissional focado em **Data Engineering, Analytics Engineering, Dat
 
 1. [Analytics Health — Série Hematologia](projects/01-analytics-health-serie-hematologia/) — publicado
 2. [Databricks Genie AI — Oil & Gas Industrial Analytics 360](projects/02-databricks-genie-ai/) — publicado
-3. [Fabric Data Engineering — Wind Power Analytics](projects/03-fabric-data-engineering/) — **em desenvolvimento**
+3. [Fabric Data Engineering — Wind Power Analytics](projects/03-fabric-data-engineering/) — publicado
 4. [DRE — Visão Gerencial (Power BI + IA)](projects/04-dre-visao-gerencial/) — **publicado**, demonstração com dados sintéticos e comparativo previsto × realizado
 
 5. [Agente de Documentação de Produtos de Dados com Claude](projects/05-agente-documentacao-claude/) — pipeline local Python, metadados Power BI, documentação, QA com evidências e IA sob demanda.
