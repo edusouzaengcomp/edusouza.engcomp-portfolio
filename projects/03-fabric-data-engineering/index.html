@@ -24,21 +24,11 @@
 .wind-panel{margin-top:22px}
 .wind-pills{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
 .wind-pills span{border:1px solid #3d4740;border-radius:100px;padding:8px 12px;font-size:12px;color:#d5e3d0}
-.wind-dashboard{border:1px solid var(--wind-line);background:#0c0f12;border-radius:12px;padding:24px;margin-top:24px}
-.wind-dashboard .heading{display:flex;justify-content:space-between;gap:14px;align-items:center}
-.wind-dashboard .heading span{color:var(--wind-muted);font-size:12px}
-.wind-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
-.wind-kpi{background:#161b20;padding:18px;border-radius:8px;border-top:3px solid #91d949}
-.wind-kpi small{color:#b2b9bd;font-size:11px;display:block;text-transform:uppercase}
-.wind-kpi strong{display:block;font-size:clamp(19px,3vw,28px);margin-top:10px;color:#f8fafb}
-.wind-bars{display:flex;align-items:flex-end;gap:14px;height:160px;padding:12px 4px;border-bottom:1px solid #54606a}
-.wind-bars i{flex:1;display:block;background:linear-gradient(0deg,#406b38,#a5ff00);border-radius:4px 4px 0 0;min-width:5px}
-.wind-note{font-size:11px;color:#aab2ba;margin-top:17px}
 .wind-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .wind-actions a{display:inline-flex;text-decoration:none;padding:13px 20px;border:1px solid #66746b;border-radius:7px;color:#fff;font-size:13px;font-weight:700}
 .wind-actions a:first-child{background:#a5ff00;border-color:#a5ff00;color:#10160d}
-@media(max-width:900px){.wind-facts,.wind-kpis{grid-template-columns:repeat(2,1fr)}.wind-flow{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.wind-facts,.wind-kpis,.wind-grid,.wind-flow{grid-template-columns:1fr}.wind-dashboard{padding:15px}}
+@media(max-width:900px){.wind-facts{grid-template-columns:repeat(2,1fr)}.wind-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.wind-facts,.wind-grid,.wind-flow{grid-template-columns:1fr}}
 
 .wind-timeline{display:grid;gap:14px;margin:26px 0}
 .wind-timeline article{display:grid;grid-template-columns:54px 1fr;gap:18px;align-items:start;padding:20px;border:1px solid #292d33;border-radius:10px;background:#0b0d0f}
@@ -57,7 +47,6 @@
 .wind-slide .wind-slide-copy small{color:#5fe1c1;font-weight:800;letter-spacing:.08em}
 .wind-slide h3{margin:8px 0;font-size:19px}
 .wind-slide p{margin:0;font-size:13px;color:#b2bfc2;line-height:1.75}
-.wind-img-notice{color:#e4bb61;font-size:12px;margin:12px 0}
 @media(max-width:800px){.wind-slides{grid-template-columns:1fr}}
 .wind-gif-frame{border:1px solid #315b4b;border-radius:14px;background:#09141a;padding:14px;margin-top:24px}.wind-gif-frame img{display:block;width:100%;height:auto;border-radius:8px}.wind-gif-caption{font-size:12px;color:#a3b8ba;line-height:1.65;padding:10px 5px}.wind-gif-frame .asset-pending{color:#e8c873;font-size:13px;line-height:1.7;padding:18px}.wind-gif-actions{display:flex;gap:10px;flex-wrap:wrap;padding:8px 5px}.wind-gif-actions a{color:#a5ff00;text-decoration:underline}.wind-gif-frame [hidden]{display:none!important}
 .wind-fallback{padding:clamp(22px,4vw,40px);background:linear-gradient(130deg,#11211b,#0c1518);border-radius:10px}
@@ -67,6 +56,19 @@
 .wind-fallback-steps{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0}
 .wind-fallback-steps span{border:1px solid #3b6253;padding:9px 12px;border-radius:7px;color:#ddf0e6;font-size:12px}
 .wind-fallback-link{display:inline-block;color:#a5ff00;font-weight:700;text-decoration:underline;text-underline-offset:4px;font-size:13px}
+
+.wind-evidence{margin:1rem 0 1.5rem}
+.wind-evidence a{display:block;border:1px solid var(--wind-line);border-radius:10px;overflow:hidden}
+.wind-evidence a:focus-visible,.wind-slide a:focus-visible{outline:2px solid var(--wind-accent);outline-offset:3px}
+.wind-evidence img{display:block;width:100%;height:auto}
+.wind-evidence figcaption{margin-top:.6rem;color:var(--wind-muted);font-size:.875rem;line-height:1.55}
+.wind-evidence pre{margin:0;overflow:auto;padding:1rem;border:1px solid var(--wind-line);border-radius:8px;background:#101719;color:#e0f4ee;font-size:.875rem;line-height:1.6}
+.wind-model{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin:0;padding:0;list-style:none}
+.wind-model li{margin:0;padding:.8rem;border:1px solid #456a39;border-radius:8px;background:#101719;overflow-wrap:anywhere}
+.wind-model li:first-child{grid-column:1/-1;border-color:var(--wind-accent)}
+.wind-model small{display:block;color:var(--wind-muted)}
+.wind-slide picture a{display:block}
+@media(max-width:480px){.wind-model{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -89,7 +91,7 @@
 <h2>WindPowerAnalytics<br><em>Uma jornada visual.</em></h2>
 <p>Da origem dos dados à análise de produção eólica: arquitetura Microsoft Fabric, camadas Bronze, Silver e Gold, pipeline, monitoramento, modelo semântico e cinco páginas do Power BI.</p>
 <div class="wind-gif-frame" id="windPresentation">
-  <img id="windGif" src="../../assets/images/WindPowerAnalytics_Historia_Completa.gif" loading="eager" alt="Animação das 12 etapas do WindPowerAnalytics: arquitetura, pipeline, monitoramento, modelo semântico e páginas do Power BI" onload="document.getElementById('windGifActions').hidden=false;document.getElementById('windGifFallback').hidden=true;document.getElementById('windGifOpen').href=this.currentSrc" onerror="if(!this.dataset.retried){this.dataset.retried='1';this.src='../../assets/images/windpoweranalytics/WindPowerAnalytics_Historia_Completa.gif'}else{this.hidden=true;document.getElementById('windGifActions').hidden=true;document.getElementById('windGifFallback').hidden=false}">
+  <img id="windGif" src="./WindPowerAnalytics_Historia_Completa.gif" loading="eager" alt="Animação das 12 etapas do WindPowerAnalytics: arquitetura, pipeline, monitoramento, modelo semântico e páginas do Power BI" onload="document.getElementById('windGifActions').hidden=false;document.getElementById('windGifFallback').hidden=true;document.getElementById('windGifOpen').href=this.currentSrc" onerror="this.hidden=true;document.getElementById('windGifActions').hidden=true;document.getElementById('windGifFallback').hidden=false">
   <div id="windGifFallback" class="wind-fallback" hidden>
     <small>VISÃO GERAL DO PROJETO</small>
     <h3>Da engenharia de dados ao produto analítico</h3>
@@ -99,7 +101,7 @@
     </div>
     <a href="#arquitetura" class="wind-fallback-link">Explorar arquitetura e implementação ↓</a>
   </div>
-  <div id="windGifActions" class="wind-gif-actions" hidden><a id="windGifOpen" href="../../assets/images/WindPowerAnalytics_Historia_Completa.gif" target="_blank" rel="noopener noreferrer">Abrir animação em tamanho maior ↗</a></div>
+  <div id="windGifActions" class="wind-gif-actions" hidden><a id="windGifOpen" href="./WindPowerAnalytics_Historia_Completa.gif" target="_blank" rel="noopener noreferrer">Abrir animação em tamanho maior ↗</a></div>
   <div class="wind-gif-caption">O estudo de caso abaixo documenta a arquitetura, a orquestração e a entrega analítica do WindPowerAnalytics.</div>
 </div>
 </section>
@@ -107,6 +109,10 @@
 <div class="tag">01 / ARQUITETURA DA SOLUÇÃO</div>
 <h2>Do dado bruto<br><em>ao Lakehouse.</em></h2>
 <p>Arquitetura construída no Microsoft Fabric com Lakehouses separados por camada. O fluxo organiza os registros de turbinas eólicas desde a captura até a disponibilização dos dados para análise.</p>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/arquitetura.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Diagrama do workspace Fabric com fontes HTTP e CSV, Lakehouses, modelo semântico e relatórios"><img src="../../assets/images/windpoweranalytics/arquitetura.webp" loading="lazy" decoding="async" alt="Diagrama do workspace Fabric com fontes HTTP e CSV, Lakehouses, modelo semântico e relatórios"></a>
+  <figcaption>As fontes HTTP e CSV alimentam os Lakehouses Bronze, Silver e Gold antes do consumo pelo Power BI.</figcaption>
+</figure>
 <div class="wind-flow" role="list" aria-label="Fluxo da arquitetura de dados">
 <div class="wind-step"><small>01 · ORIGEM</small><b>Fontes de dados</b><span>Arquivo CSV e coleta web de dados de turbinas e produção eólica.</span></div>
 <div class="wind-step"><small>02 · BRONZE</small><b>Dados brutos</b><span>Ingestão e persistência no Lakehouse Bronze, preservando o dado recebido.</span></div>
@@ -115,46 +121,83 @@
 <div class="wind-step"><small>05 · CONSUMO</small><b>Power BI</b><span>Modelo semântico e relatório para acompanhar produção e desempenho operacional.</span></div>
 </div>
 <div class="wind-pills"><span>Microsoft Fabric</span><span>OneLake</span><span>Lakehouse</span><span>PySpark</span><span>Delta Lake</span><span>SQL</span><span>Power BI</span></div>
+<div class="wind-grid">
+<div class="wind-card"><h3>Bronze · Leitura da tabela Delta</h3><figure class="wind-evidence"><pre tabindex="0"><code>df = spark.read.format(&quot;delta&quot;).load(bronze_table_path)</code></pre><figcaption>Trecho do notebook Bronze → Silver que lê a tabela wind_power no Lakehouse Bronze.</figcaption></figure></div>
+<div class="wind-card"><h3>Silver · Tratamento com PySpark</h3><figure class="wind-evidence"><pre tabindex="0"><code>df_transformed = (df
+    .withColumn(&quot;wind_speed&quot;, round(col(&quot;wind_speed&quot;), 2))
+    .withColumn(&quot;energy_produced&quot;, round(col(&quot;energy_produced&quot;), 2))
+    .withColumn(&quot;day&quot;, dayofmonth(col(&quot;date&quot;)))
+    .withColumn(&quot;month&quot;, month(col(&quot;date&quot;)))
+    .withColumn(&quot;quarter&quot;, quarter(col(&quot;date&quot;)))
+    .withColumn(&quot;year&quot;, year(col(&quot;date&quot;)))
+    .withColumn(&quot;time&quot;, regexp_replace(col(&quot;time&quot;), &quot;-&quot;, &quot;:&quot;))
+    # …
+)</code></pre><figcaption>Trecho do mesmo notebook. Arredonda as métricas e deriva atributos de calendário.</figcaption></figure></div>
+</div>
 <div class="wind-panel">
 <h3>Modelo Gold · Esquema estrela</h3>
 <p><strong>fact_wind_power</strong> centraliza os registros da produção e se relaciona às dimensões <strong>dim_date</strong>, <strong>dim_time</strong>, <strong>dim_turbine</strong> e <strong>dim_operational_status</strong>. As dimensões oferecem contexto temporal, características das turbinas e status operacionais.</p>
+<figure class="wind-evidence">
+<ul class="wind-model" aria-label="Tabela fato e dimensões do modelo Gold">
+<li><code>fact_wind_power</code><small>Tabela fato · produção e vento</small></li>
+<li><code>dim_date</code><small>Relacionada por date_id</small></li>
+<li><code>dim_time</code><small>Relacionada por time_id</small></li>
+<li><code>dim_turbine</code><small>Relacionada por turbine_id</small></li>
+<li><code>dim_operational_status</code><small>Relacionada por status_id</small></li>
+</ul>
+<figcaption>Esquema lógico reconstruído a partir do notebook Silver → Gold.</figcaption>
+</figure>
 </div>
 </section>
 <section id="pipeline" class="section">
 <div class="tag">02 / ORQUESTRAÇÃO E MONITORAMENTO</div>
 <h2>Da ingestão<br><em>à atualização.</em></h2>
 <p>O fluxo operacional reúne a coleta diária <strong>Get Daily Wind Turbine Data</strong>, o processamento das camadas do Lakehouse e a atualização do modelo semântico. O monitoramento identifica falhas e sucessos para apoiar a operação.</p>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/pipeline.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Execução no Fabric com coleta diária, notebooks Bronze a Silver e Silver a Gold, atualização do modelo e alertas"><img src="../../assets/images/windpoweranalytics/pipeline.webp" loading="lazy" decoding="async" alt="Execução no Fabric com coleta diária, notebooks Bronze a Silver e Silver a Gold, atualização do modelo e alertas"></a>
+  <figcaption>A execução encadeia os notebooks e atualiza o modelo semântico. Os ramos do pipeline enviam alertas pelo Teams e por e-mail.</figcaption>
+</figure>
 <div class="wind-grid">
 <div class="wind-card"><small>ETAPA 01</small><h3>Ingestão diária</h3><p>Coleta e carga de novos dados de turbinas para a camada de entrada, com acompanhamento do processamento no Fabric.</p></div>
 <div class="wind-card"><small>ETAPA 02</small><h3>Notebooks e transformação</h3><p>Aplicação de regras de limpeza, geração de atributos temporais e preparação do modelo Gold em tabelas Delta.</p></div>
 <div class="wind-card"><small>ETAPA 03</small><h3>Modelo semântico</h3><p>Disponibilização e atualização dos dados analíticos utilizados pelo Power BI, com atenção a mudanças de schema.</p></div>
 <div class="wind-card"><small>ETAPA 04</small><h3>Observabilidade</h3><p>Monitoramento de execuções no Fabric e comunicação de sucesso ou falha por notificações no Teams e e-mail.</p></div>
 </div>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/teams.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Mensagem no Microsoft Teams confirmando a atualização do modelo semântico"><img src="../../assets/images/windpoweranalytics/teams.webp" loading="lazy" decoding="async" alt="Mensagem no Microsoft Teams confirmando a atualização do modelo semântico"></a>
+  <figcaption>O Teams registra a conclusão bem-sucedida da atualização do modelo semântico do WindPowerAnalytics.</figcaption>
+</figure>
 <div class="wind-panel"><h3>Confiabilidade operacional</h3><p>Durante a implementação, a solução também exigiu tratamento de evolução do schema Delta, alinhamento entre dimensões e modelo semântico e observação de limites de capacidade Spark. Esses pontos fazem parte da experiência prática de operação da plataforma.</p></div>
 </section>
 <section id="produto" class="section">
 <div class="tag">03 / PRODUTO DE DADOS · POWER BI</div>
 <h2>Informação pronta<br><em>para análise.</em></h2>
 <p>O relatório final integra cinco perspectivas: <strong>Visão geral, Produção, Operação, Vento e Turbinas</strong>. Os painéis permitem comparar produção acumulada, registros online, condições do vento e desempenho das turbinas monitoradas.</p>
-<div class="wind-dashboard" aria-label="Resumo dos indicadores do relatório Wind Power Analytics">
-<div class="heading"><strong>WIND POWER ANALYTICS · VISÃO GERAL</strong><span>Recorte exibido no relatório enviado</span></div>
-<div class="wind-kpis">
-<div class="wind-kpi"><small>Produção acumulada</small><strong>8,83 Mi</strong></div>
-<div class="wind-kpi"><small>Registros online</small><strong>90,75%</strong></div>
-<div class="wind-kpi"><small>Vento médio</small><strong>13,40</strong></div>
-<div class="wind-kpi"><small>Turbinas</small><strong>3</strong></div>
-</div>
-<p>Exemplo de evolução diária da produção, apresentado de forma ilustrativa para demonstrar o conceito visual do dashboard.</p>
-<div class="wind-bars" aria-hidden="true">
-<i style="height:66%"></i><i style="height:74%"></i><i style="height:64%"></i><i style="height:82%"></i><i style="height:78%"></i><i style="height:88%"></i><i style="height:68%"></i><i style="height:95%"></i><i style="height:73%"></i><i style="height:85%"></i><i style="height:90%"></i><i style="height:77%"></i>
-</div>
-<div class="wind-note">Valores dos cartões extraídos do relatório do projeto (junho de 2024). As unidades de produção e velocidade do vento não foram especificadas na fonte; o gráfico acima é ilustrativo.</div>
-</div>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/visao-geral.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Visão geral do Power BI com cartões de produção acumulada, registros online, vento médio e turbinas"><img src="../../assets/images/windpoweranalytics/visao-geral.webp" loading="lazy" decoding="async" alt="Visão geral do Power BI com cartões de produção acumulada, registros online, vento médio e turbinas"></a>
+  <figcaption>Visão geral do relatório. O recorte mostra 8,83 Mi de produção acumulada, 90,75% de registros online e três turbinas.</figcaption>
+</figure>
 <div class="wind-grid">
-<div class="wind-card"><small>VISÃO 01</small><h3>Produção</h3><p>Evolução diária e horária, participação por turbina, média diária e registros sem produção.</p></div>
-<div class="wind-card"><small>VISÃO 02</small><h3>Operação</h3><p>Percentual de registros online, registros de falha, manutenção e distribuição do tempo por status.</p></div>
-<div class="wind-card"><small>VISÃO 03</small><h3>Vento</h3><p>Velocidade média, valores mínimo e máximo, direção predominante e relação entre vento e produção.</p></div>
-<div class="wind-card"><small>VISÃO 04</small><h3>Turbinas</h3><p>Comparação entre turbinas, capacidade cadastrada, produção e disponibilidade observada.</p></div>
+<div class="wind-card"><small>VISÃO 01</small><h3>Produção</h3>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/producao.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Página Produção do Power BI com evolução da geração e participação por turbina"><img src="../../assets/images/windpoweranalytics/producao.webp" loading="lazy" decoding="async" alt="Página Produção do Power BI com evolução da geração e participação por turbina"></a>
+  <figcaption>Evolução diária e horária, participação por turbina, média diária e registros sem produção.</figcaption>
+</figure></div>
+<div class="wind-card"><small>VISÃO 02</small><h3>Operação</h3>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/operacao.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Página Operação do Power BI com disponibilidade e ocorrências"><img src="../../assets/images/windpoweranalytics/operacao.webp" loading="lazy" decoding="async" alt="Página Operação do Power BI com disponibilidade e ocorrências"></a>
+  <figcaption>Percentual de registros online, registros de falha, manutenção e distribuição do tempo por status.</figcaption>
+</figure></div>
+<div class="wind-card"><small>VISÃO 03</small><h3>Vento</h3>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/vento.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Página Vento do Power BI com velocidade, direção e relação com a produção"><img src="../../assets/images/windpoweranalytics/vento.webp" loading="lazy" decoding="async" alt="Página Vento do Power BI com velocidade, direção e relação com a produção"></a>
+  <figcaption>Velocidade média, valores mínimo e máximo, direção predominante e relação entre vento e produção.</figcaption>
+</figure></div>
+<div class="wind-card"><small>VISÃO 04</small><h3>Turbinas</h3>
+<figure class="wind-evidence">
+  <a href="../../assets/images/windpoweranalytics/turbinas.webp" target="_blank" rel="noopener" aria-label="Ampliar imagem: Página Turbinas do Power BI com comparativos entre ativos"><img src="../../assets/images/windpoweranalytics/turbinas.webp" loading="lazy" decoding="async" alt="Página Turbinas do Power BI com comparativos entre ativos"></a>
+  <figcaption>Comparação entre turbinas, capacidade cadastrada, produção e disponibilidade observada.</figcaption>
+</figure></div>
 </div>
 </section>
 
@@ -171,31 +214,23 @@
 <article><span>06</span><div><h3>Monitoramento, falhas e sucesso</h3><p>O Monitoring Hub permite acompanhar as execuções, enquanto alertas no Teams e e-mail comunicam os resultados do processamento e da atualização do modelo semântico.</p></div></article>
 <article><span>07</span><div><h3>Produto final: Power BI</h3><p>O relatório reúne Visão Geral, Produção, Operação, Vento e Turbinas, transformando a base Gold em acompanhamento operacional e análise de desempenho.</p></div></article>
 </div>
-<div class="wind-resource"><h3>Imagens originais da apresentação · 12 páginas</h3><p>Visualize o passo a passo real da solução, da arquitetura à entrega dos relatórios. Cada imagem corresponde a uma página do documento preparado para LinkedIn. O pacote de imagens e o PDF devem ser enviados à pasta de assets do GitHub para aparecerem publicamente.</p><p class="wind-img-notice">PDF para download: o arquivo estará disponível aqui após o envio dos assets ao repositório.</p></div><div class="wind-slides"><article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-01.webp" alt="Página 1 da apresentação WindPowerAnalytics: Capa — Da arquitetura ao produto" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 01 / 12</small><h3>Capa — Da arquitetura ao produto</h3><p>Visão da jornada completa do projeto: Engenharia de Dados, pipelines, DataOps e Analytics.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-02.webp" alt="Página 2 da apresentação WindPowerAnalytics: Arquitetura Microsoft Fabric" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 02 / 12</small><h3>Arquitetura Microsoft Fabric</h3><p>A figura original mostra fontes HTTP/API e CSV, ingestão, Lakehouses Bronze, Silver e Gold, modelo semântico e Power BI.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-03.webp" alt="Página 3 da apresentação WindPowerAnalytics: Arquitetura Medallion" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 03 / 12</small><h3>Arquitetura Medallion</h3><p>Bronze recebe os dados, Silver padroniza e trata com notebooks PySpark, e Gold estrutura uma tabela fato e quatro dimensões.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-04.webp" alt="Página 4 da apresentação WindPowerAnalytics: Pipeline automatizado" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 04 / 12</small><h3>Pipeline automatizado</h3><p>Fluxo real de execução: Get Daily Wind Turbine Data, Bronze → Silver, Silver → Gold e atualização do modelo semântico.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-05.webp" alt="Página 5 da apresentação WindPowerAnalytics: DataOps e observabilidade" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 05 / 12</small><h3>DataOps e observabilidade</h3><p>Exemplo real de alerta de sucesso no Teams. A esteira também possui notificações de falha para acompanhamento e reprocessamento.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-06.webp" alt="Página 6 da apresentação WindPowerAnalytics: Do dado ao negócio" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 06 / 12</small><h3>Do dado ao negócio</h3><p>A camada semântica disponibiliza informações para as cinco páginas analíticas do Power BI.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-07.webp" alt="Página 7 da apresentação WindPowerAnalytics: Visão geral" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 07 / 12</small><h3>Visão geral</h3><p>Indicadores consolidados de produção acumulada, registros online, vento médio e quantidade de turbinas monitoradas.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-08.webp" alt="Página 8 da apresentação WindPowerAnalytics: Produção" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 08 / 12</small><h3>Produção</h3><p>Evolução temporal e participação por turbina, média diária, melhor dia e registros com produção zero.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-09.webp" alt="Página 9 da apresentação WindPowerAnalytics: Operação" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 09 / 12</small><h3>Operação</h3><p>Percentuais de registros online, ocorrências de falha e manutenção, além de comparativos por turbina.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-10.webp" alt="Página 10 da apresentação WindPowerAnalytics: Vento" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 10 / 12</small><h3>Vento</h3><p>Análise das velocidades, direções predominantes e relação entre a intensidade do vento e a produção.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-11.webp" alt="Página 11 da apresentação WindPowerAnalytics: Turbinas" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 11 / 12</small><h3>Turbinas</h3><p>Comparação entre ativos de geração, capacidades cadastradas, produção e registros online.</p></div></article>
-<article class="wind-slide"><picture><img src="../../assets/images/windpoweranalytics/wind-slide-12.webp" alt="Página 12 da apresentação WindPowerAnalytics: Entrega final" loading="lazy" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<p class=\'wind-img-notice\'>Imagem pendente de publicação no repositório.</p>')"></picture><div class="wind-slide-copy"><small>PÁGINA 12 / 12</small><h3>Entrega final</h3><p>Síntese do fluxo ponta a ponta: dados → processamento → operação → decisão, usando Microsoft Fabric e Power BI.</p></div></article></div><div class="wind-resource">
-<h3>Apresentação técnica para LinkedIn · 12 páginas</h3>
-<p>A apresentação reúne a história da arquitetura, os passos do pipeline, o monitoramento e as telas do produto analítico. O arquivo PDF está preparado; sua publicação como download direto neste site depende de adicionar o arquivo <code>WindPowerAnalytics_Jornada_Fabric_LinkedIn.pdf</code> ao diretório <code>assets/docs/</code> do repositório.</p>
-<p><strong>Enquanto isso, explore o estudo de caso completo nesta página</strong> e o resumo do dashboard logo acima.</p>
-<a href="#arquitetura">Revisar a arquitetura ↗</a>
+<div class="wind-resource">
+<h3>Apresentação para LinkedIn</h3>
+<p>Veja as 12 páginas da jornada, da arquitetura à entrega do relatório.</p>
+<a href="../../assets/docs/WindPowerAnalytics_Jornada_Fabric_LinkedIn.pdf" download>Baixar apresentação em PDF</a>
 </div>
-<div class="wind-grid">
-<div class="wind-card"><small>RELATÓRIO · CAPA</small><h3>Inteligência Eólica</h3><p>Apresentação do Wind Power Analytics e da visão integrada de produção, operação e performance.</p></div>
-<div class="wind-card"><small>RELATÓRIO · VISÃO GERAL</small><h3>Indicadores principais</h3><p>Produção acumulada de 8,83 Mi, 90,75% de registros online, vento médio de 13,40 e três turbinas monitoradas no recorte apresentado.</p></div>
-<div class="wind-card"><small>RELATÓRIO · PRODUÇÃO</small><h3>Evolução e participação</h3><p>Análises por dia, hora e turbina; média diária, melhor dia e registros com produção zero.</p></div>
-<div class="wind-card"><small>RELATÓRIO · OPERAÇÃO</small><h3>Disponibilidade e ocorrências</h3><p>Participação dos estados operacionais, registros de falhas e manutenção por turbina.</p></div>
-<div class="wind-card"><small>RELATÓRIO · VENTO</small><h3>Condições ambientais</h3><p>Velocidade e direção do vento, faixas de velocidade e relação com a produção.</p></div>
-<div class="wind-card"><small>RELATÓRIO · TURBINAS</small><h3>Comparação entre ativos</h3><p>Capacidade cadastrada, produção acumulada e indicadores operacionais comparativos.</p></div>
-</div>
+<div class="wind-slides"><article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-01.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-01.webp" alt="Página 1 da apresentação WindPowerAnalytics: Capa — Da arquitetura ao produto" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 01 / 12</small><h3>Capa — Da arquitetura ao produto</h3><p>Visão da jornada completa do projeto: Engenharia de Dados, pipelines, DataOps e Analytics.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-02.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-02.webp" alt="Página 2 da apresentação WindPowerAnalytics: Arquitetura Microsoft Fabric" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 02 / 12</small><h3>Arquitetura Microsoft Fabric</h3><p>A figura original mostra fontes HTTP/API e CSV, ingestão, Lakehouses Bronze, Silver e Gold, modelo semântico e Power BI.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-03.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-03.webp" alt="Página 3 da apresentação WindPowerAnalytics: Arquitetura Medallion" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 03 / 12</small><h3>Arquitetura Medallion</h3><p>Bronze recebe os dados, Silver padroniza e trata com notebooks PySpark, e Gold estrutura uma tabela fato e quatro dimensões.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-04.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-04.webp" alt="Página 4 da apresentação WindPowerAnalytics: Pipeline automatizado" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 04 / 12</small><h3>Pipeline automatizado</h3><p>Fluxo real de execução: Get Daily Wind Turbine Data, Bronze → Silver, Silver → Gold e atualização do modelo semântico.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-05.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-05.webp" alt="Página 5 da apresentação WindPowerAnalytics: DataOps e observabilidade" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 05 / 12</small><h3>DataOps e observabilidade</h3><p>Exemplo real de alerta de sucesso no Teams. A esteira também possui notificações de falha para acompanhamento e reprocessamento.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-06.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-06.webp" alt="Página 6 da apresentação WindPowerAnalytics: Do dado ao negócio" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 06 / 12</small><h3>Do dado ao negócio</h3><p>A camada semântica disponibiliza informações para as cinco páginas analíticas do Power BI.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-07.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-07.webp" alt="Página 7 da apresentação WindPowerAnalytics: Visão geral" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 07 / 12</small><h3>Visão geral</h3><p>Indicadores consolidados de produção acumulada, registros online, vento médio e quantidade de turbinas monitoradas.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-08.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-08.webp" alt="Página 8 da apresentação WindPowerAnalytics: Produção" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 08 / 12</small><h3>Produção</h3><p>Evolução temporal e participação por turbina, média diária, melhor dia e registros com produção zero.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-09.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-09.webp" alt="Página 9 da apresentação WindPowerAnalytics: Operação" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 09 / 12</small><h3>Operação</h3><p>Percentuais de registros online, ocorrências de falha e manutenção, além de comparativos por turbina.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-10.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-10.webp" alt="Página 10 da apresentação WindPowerAnalytics: Vento" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 10 / 12</small><h3>Vento</h3><p>Análise das velocidades, direções predominantes e relação entre a intensidade do vento e a produção.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-11.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-11.webp" alt="Página 11 da apresentação WindPowerAnalytics: Turbinas" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 11 / 12</small><h3>Turbinas</h3><p>Comparação entre ativos de geração, capacidades cadastradas, produção e registros online.</p></div></article>
+<article class="wind-slide"><picture><a href="../../assets/images/windpoweranalytics/wind-slide-12.webp" target="_blank" rel="noopener"><img src="../../assets/images/windpoweranalytics/wind-slide-12.webp" alt="Página 12 da apresentação WindPowerAnalytics: Entrega final" loading="lazy"></a></picture><div class="wind-slide-copy"><small>PÁGINA 12 / 12</small><h3>Entrega final</h3><p>Síntese do fluxo ponta a ponta: dados → processamento → operação → decisão, usando Microsoft Fabric e Power BI.</p></div></article></div>
 </section>
 <section class="section">
 <div class="tag">05 / RESULTADO E APRENDIZADOS</div>
